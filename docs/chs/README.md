@@ -28,12 +28,14 @@
 ### 当前内测阶段价格
 * 440`HKD` 399`CNY` 56`USDT`的永久
 * 110`HKD` 100`CNY` 14`USDT`的年付
+* 55`HKD` 50`CNY`的半年付
+
 
 * 或点击详情 ↓
 
 <details>
 
-* 55`HKD` 50`CNY`的半年付
+
 
 </details>
 
