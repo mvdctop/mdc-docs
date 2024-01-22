@@ -22,7 +22,7 @@
 ## 1. 在网页端的[用户面板](https://user.mvdc.top)注册账号
 * 可在网页端登录后，进行个性化[配置](https://user.mvdc.top/configuration/general)
 * 云配置支持多个配置实例，可添加多个云配置实例，应对不同类型的影片
-* （可选）建议阁下申请[TMDB API KEY](/chs/configuration.html#tmdb-api-key)填入配置中，以获得更全的影片元数据
+* （可选）如果频繁使用或对数据精准有要求，建议阁下申请[TMDB API KEY](/chs/configuration.html#tmdb-api-key)填入云配置中
 
 ## 2. 购买激活码激活订阅
 月付请等待内测结束，48小时内未激活账号将会被删除
