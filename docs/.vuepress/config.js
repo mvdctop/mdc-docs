@@ -42,7 +42,7 @@ export default {
             link: '/chs/README.md',
           },
           {
-            text: '影片命名规则',
+            text: '文件命名规则',
             link: '/chs/naming.md',
           },
           {

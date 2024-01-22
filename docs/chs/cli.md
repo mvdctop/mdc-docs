@@ -8,7 +8,8 @@
 * `-t` 名称提取模式
 * `-s` 为输出目录下无字幕影片添加字幕
 * `-o` 其他模式
-* `--cloud-config-instance` 云配置实例选择，默认为`Default`，选择名为test1的云配置实例`--cloud-config-instance "test1"`
+* `-cc` `--cloud-config-instance` 云配置实例选择，默认`Default`，如选择名为`test1`的云配置实例`--cloud-config-instance "test1"` 或 `-cc "test1"`
+* `-lc` `--local-config-file` 本地配置文件，默认`mdc.ini`，如选择名为`mdc_test.ini`的本地配置文件`--local-config-file "mdc_test.ini"` 或 `-lc "mdc_test.ini"`
 * `-C` 本地配置文件覆盖模式，仅限于覆盖客户端本地配置，如输入输出目录配置，多个配置使用`;`分隔，实例如下
 ```shell
 ./MDC -cli -C "common:source_folders=['/a/video1'];common:success_folder=/a/output2"
@@ -19,13 +20,30 @@
 然后编辑`.mdc/mdc.ini`配置文件
 
 ```ini
+[proxy]
+switch = 0
+type = http
+proxy = localhost
+port = 1080
+```
+### switch
+代理开关 0关1开
+
+### type
+代理类型 `http` `socks5` `socks5h`
+
+## proxy
+代理地址 `localhost` `192.168.x.x`
+
+## port
+代理端口
+
+```ini
 [common]
 language =
 sync_time =
 source_folders =
 success_folder =
-source_folders_other =
-success_folder_other =
 ```
 ### language
 程序语言 默认空为`eng` 可选`chs`简体中文 `cht`繁体中文
@@ -46,21 +64,6 @@ source_folders = ['/home/test/video1', '/home/test/video2']
 ```ini
 [common]
 success_folder = /home/test/output
-```
-
-### source_folders_other
-其他电影输入目录 该值请输入为列表 实例如下 请勿重复输入
-```ini
-[common]
-source_folders = ['C:/Users/Administrator/video-other']
-source_folders = ['/home/test/video-other', '/home/test/video-other2']
-```
-
-### success_folder_other
-其他电影成功输出目录 直接输入目录路径 实例如下
-```ini
-[common]
-success_folder_other = /home/test/output-other
 ```
 
 ### cloud_config_instance
@@ -92,13 +95,6 @@ switch = 0
 subs_folder = /home/test/subs
 ```
 ### 一般影片外挂字幕目录
-
-```ini
-[subs]
-subs_folder_other = /home/test/subs-other
-```
-### 其他影片外挂字幕目录
-* 0关 1开
 
 ## user_token
 ```ini
