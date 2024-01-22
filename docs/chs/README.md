@@ -12,9 +12,9 @@
 * **云配置管理**：用于管理云刮削的配置设置
 * **设备管理**：用于查看于管理登录过账号的设备
 ### 本地客户端
-* 支持 Windows, MacOS, Linux, Docker
+✅ 支持 Windows, MacOS, Linux, Docker  
 ✅ **云配置同步**：本地客户端可以同步网页端的云配置，从而根据设定的云配置对本地电影进行整理  
-✅ **元数据获取与封面下载**：根据云配置，对本地影片进行元数据刮削和封面下载 
+✅ **元数据获取与封面下载**：根据云配置，对本地影片进行元数据刮削和封面下载  
 ✅ **多客户端支持**：支持使用同一账户在多个本地客户端上使用多个云配置实例  
 
 # 使用教程
@@ -31,13 +31,7 @@
 🟢 **一年** 110`HKD` 99`CNY` 14`USDT`  
 🟢 **半年** 50 `CNY`
 
-* 或点击详情 ↓
-
-<details>
-
-</details>
-
-* 台灣及其他地区，可在WISE匯款至香港FPS，[點擊](https://wise.com/zh-hk/send-money/send-money-to-fps-id#calculator)匯款，WISE匯款100HKD/年（已扣除匯款手續費），FPS ID: `106254626` Name: `mdc mdc`
+* 台灣及其他地区，可在WISE匯款至香港FPS，[點擊](https://wise.com/zh-hk/send-money/send-money-to-fps-id#calculator)匯款，FPS ID: `106254626` Name: `mdc mdc`
 
 * **直接发送付款截图**，不用问`在吗`，私聊[Telegram](https://t.me/yoshiko2_dev)或发送邮箱`yoshiko2.dev@gmail.com`，邮件标题：`付款截图`
 
