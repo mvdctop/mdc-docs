@@ -30,31 +30,29 @@
 
 本镜像增加了权限设置功能，你可以通过使用 UID (用户id) GID (组id) 两个环境变量来配置程序运行后所有文件的权限。
 
-| 字段名                   | 值语义                          | 预设值         |
-|:----------------------|:-----------------------------|:------------|
-| UID                   | uid                          | 99          |
-| GID                   | gid                          | 100         |
-| UMASK                 | source, output目录的umask       | 002         |
-| NAME                  | 网页端显示的设备名称                   | MDC-Docker  |
-| ARGS                  | [运行参数](/chs/cli.html#运行参数)   | 无           |
-| cloud_username        | 网页端的用户名                      | 无           |
-| cloud_password        | 网页端的密码                       | 无           |
-| cloud_config_instance | 云配置实例名称                      | Default     |
+| 字段名                   | 值语义                        | 预设值        |
+|:----------------------|:---------------------------|:-----------|
+| UID                   | uid                        | 99         |
+| GID                   | gid                        | 100        |
+| UMASK                 | source, output目录的umask     | 002        |
+| NAME                  | 网页端显示的设备名称                 | MDC-Docker |
+| ARGS                  | [运行参数](/chs/cli.html#运行参数) | 无          |
+| cloud_username        | 网页端的用户名                    | 无          |
+| cloud_password        | 网页端的密码                     | 无          |
+| cloud_config_instance | 云配置实例名称                    | Default    |
+| local_config_file     | 本地配置文件                     | mdc.ini    |
 
 ## 卷
-| Docker卷      | 解释       |
-|:-------------|:---------|
-| /source      | 一般影片刮削目录 |
-| /output      | 一般影片输出目录 |
-| /source-o    | 其他影片刮削目录 |
-| /output-o    | 其他影片输出目录 |
-| /subs        | 一般影片字幕目录 |
-| /subs-o      | 其他影片字幕目录 |
-| /config/.mdc | 配置文件目录   |
+| Docker卷      | 解释     |
+|:-------------|:-------|
+| /source      | 影片刮削目录 |
+| /output      | 影片输出目录 |
+| /subs        | 影片字幕目录 |
+| /config/.mdc | 配置文件目录 |
 
 * 如果刮削或整理**一般**影片，则只需设置`/source` `/output` 卷
-* 如果刮削或整理**其他**影片，则在环境变量`ARGS`添加[运行参数](/chs/cli.html#运行参数)`-o`，和只需设置`/source-o` `/output-o` 卷
-* 如果需要整理外挂字幕文件，则在配置文件`config/mdc.ini`中修改`[subs]switch=1`后，设置`/subs`或`/subs-o`卷
+* 如果刮削或整理**其他**影片，则在环境变量`ARGS`添加[运行参数](/chs/cli.html#运行参数)`-o`
+* 如果需要整理外挂字幕文件，则设置`/subs`卷
 
 #### 以下教程二选一
 
@@ -68,7 +66,7 @@
 * 创建容器，设置环境变量
 
 * 根据阁下的[注册](https://docs.mvdc.top/chs/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7)的用户名和密码，且已经激活，填写`cloud_username`和`cloud_password`  
-  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果`ARGS`留空只需输入一个空格  
+  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)
   如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称  
 
 * 连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
@@ -156,8 +154,6 @@ docker run --rm --name mdc -it \
 docker run --rm --name mdc -it \
   -v ${PWD}/test:/source \
   -v ${PWD}/output:/output \
-  -v ${PWD}/test-o:/source-o \
-  -v ${PWD}/output-o:/output-o \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
@@ -175,8 +171,6 @@ docker run --rm --name mdc -it \
 docker run --rm --name mdc -it \
   -v ${PWD}/test:/source \
   -v ${PWD}/output:/output \  
-  -v ${PWD}/test-o:/source-o \
-  -v ${PWD}/output-o:/output-o \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
