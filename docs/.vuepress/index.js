@@ -1,5 +1,3 @@
-import { defaultTheme } from 'vuepress'
-
 export default {
     theme: defaultTheme({
         locales: {
