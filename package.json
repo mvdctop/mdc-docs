@@ -9,8 +9,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vuepress": "^2.0.0-rc.2"
-  }
+  "license": "ISC"
+//  "devDependencies": {
+//    "vuepress": "^2.0.0-rc.2"
+//  }
 }
