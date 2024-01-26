@@ -9,16 +9,8 @@
 
 由于目前开发者贫穷买不起Mac mini编译程序，转译运行的某些代码无法识别系统信息，M系列暂时无法记住密码，请在用户面板踢出设备后登录
 
-# Windows
-由于技术原因与未能进行软件签名，本程序可能会被杀毒软件误报，请将本软件添加至杀毒软件信任区或白名单中  
-**本程序不含任何恶意代码与功能**，请放心加入白名单
-
 # Docker
-* 注意，因为Docker文件系统的特殊性，请仔细阅读以下操作指南后再行使用
-* 开发者对用户**因未仔细阅读文档**造成使用不当导致的文件丢失、损坏均不负责
-
-
-本镜像针对 `unraid`系统做出了特别优化，对于 `unraid`用户，本镜像的默认配置即可避免权限问题。对于其他nas系统用户，请按照各自的系统权限策略设置 `UID` `GID` `UMASK`三个环境变量。
+* 注意，因为Docker文件系统的特殊性，请仔细阅读以下操作指南后再行使用，开发者对用户**因未仔细阅读文档**造成使用不当导致的文件丢失、损坏均不负责
 
 ## 7.0.3版本升级后 请删除`config/mdc.ini`后运行
 
@@ -30,35 +22,29 @@
 
 本镜像增加了权限设置功能，你可以通过使用 UID (用户id) GID (组id) 两个环境变量来配置程序运行后所有文件的权限。
 
-| 字段名                   | 值语义                          | 预设值         |
-|:----------------------|:-----------------------------|:------------|
-| UID                   | uid                          | 99          |
-| GID                   | gid                          | 100         |
-| UMASK                 | source, output目录的umask       | 002         |
-| NAME                  | 网页端显示的设备名称                   | MDC-Docker  |
-| ARGS                  | [运行参数](/chs/cli.html#运行参数)   | 无           |
-| cloud_username        | 网页端的用户名                      | 无           |
-| cloud_password        | 网页端的密码                       | 无           |
-| cloud_config_instance | 云配置实例名称                      | Default     |
+| 字段名                   | 值语义                        | 预设值        |
+|:----------------------|:---------------------------|:-----------|
+| UID                   | uid                        | 1026       |
+| GID                   | gid                        | 100        |
+| UMASK                 | source, output目录的umask     | 002        |
+| NAME                  | 网页端显示的设备名称                 | MDC-Docker |
+| ARGS                  | [运行参数](/chs/cli.html#运行参数) | 无          |
+| cloud_username        | 网页端的用户名                    | 无          |
+| cloud_password        | 网页端的密码                     | 无          |
+| cloud_config_instance | 云配置实例名称                    | Default    |
+| local_config_file     | 本地配置文件                     | mdc.ini    |
 
 ## 卷
-| Docker卷      | 解释       |
-|:-------------|:---------|
-| /source      | 一般影片刮削目录 |
-| /output      | 一般影片输出目录 |
-| /source-o    | 其他影片刮削目录 |
-| /output-o    | 其他影片输出目录 |
-| /subs        | 一般影片字幕目录 |
-| /subs-o      | 其他影片字幕目录 |
-| /config/.mdc | 配置文件目录   |
-
-* 如果刮削或整理**一般**影片，则只需设置`/source` `/output` 卷
-* 如果刮削或整理**其他**影片，则在环境变量`ARGS`添加[运行参数](/chs/cli.html#运行参数)`-o`，和只需设置`/source-o` `/output-o` 卷
-* 如果需要整理外挂字幕文件，则在配置文件`config/mdc.ini`中修改`[subs]switch=1`后，设置`/subs`或`/subs-o`卷
+| Docker卷      | 解释     |
+|:-------------|:-------|
+| /source      | 影片刮削目录 |
+| /output      | 影片输出目录 |
+| /subs        | 影片字幕目录 |
+| /config/.mdc | 配置文件目录 |
 
 #### 以下教程二选一
 
-## DSM（图形界面）
+## 各大NAS系统
 
 <details>
 
@@ -68,17 +54,18 @@
 * 创建容器，设置环境变量
 
 * 根据阁下的[注册](https://docs.mvdc.top/chs/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7)的用户名和密码，且已经激活，填写`cloud_username`和`cloud_password`  
-  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果`ARGS`留空只需输入一个空格  
-  如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称  
+  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果刮削或整理**其他**影片，则添加`-o`  
+  如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`自定义本地配置文件
 
-* 连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
+* DSM首个新建用户的`UID`为1026，无需设置；Unraid请设置为99  
+  其他系统：连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
 
 * **不勾选**完成后运行此容器
 
-* 在容器页面中，右键详情，编辑卷，根据自身需求与[上文](#卷)，不需要全部目录都设置
+* 在容器页面中，右键详情，编辑卷，`/subs`字幕目录可选
 
-* 左侧为宿主机目录（自行设置），右侧为容器中的目录（不可变）  
-  在宿主机中新建文件夹，映射容器目录`/config/.mdc`
+* 左侧为宿主机目录（自行设置），右侧为容器中的目录（不可变）
+* 在宿主机中新建文件夹，该目录用于映射**容器内**目录`/config/.mdc`
 
 * 保存后运行
 
@@ -96,29 +83,31 @@
 ![](/images/docker/3.jpg)
 ![](/images/docker/4.jpg)
 * 根据阁下的[注册](https://docs.mvdc.top/chs/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7)的用户名和密码，且已经激活，填写`cloud_username`和`cloud_password`  
-  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果`ARGS`留空只需输入一个空格  
-  如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称
+  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果刮削或整理**其他**影片，则添加`-o`  
+  如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`自定义本地配置文件
 
-* 连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
+* DSM首个新建用户的`UID`为1026，无需设置；Unraid请设置为99  
+  其他系统：连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
+
 ![](/images/docker/id.jpg)
 ![](/images/docker/5.jpg)
 * **不勾选**完成后运行此容器
 ![](/images/docker/6.jpg)
 * 在容器页面中，右键详情，编辑卷
 ![](/images/docker/7.jpg)
-* 根据自身需求与[上文](#卷)，不需要全部目录都设置
-* 左侧为宿主机目录（自行设置），右侧为容器中的目录（不可变）
-* 在宿主机中新建文件夹，映射容器目录`/config/.mdc`
+* 左侧为宿主机目录（自行设置），右侧为容器中的目录（不可变），`/subs`字幕目录可选
+* 在宿主机中新建文件夹，该目录用于映射**容器内**目录`/config/.mdc`
 ![](/images/docker/8.jpg)
 * 保存后运行
 
-* 第一次运行，会在`config`目录下生成`mdc.ini`文件
+* 第一次运行，会在`config`目录下生成`mdc.ini`文件，如果出现意外退出错误请忽略
 * **请勿修改`[common]`下`folder`相关配置**，这是容器内的目录配置，修改会导致`源文件夹未找到`
 * 阅读[这里](https://docs.mvdc.top/chs/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)根据自身需求配置，如配置代理
 ![](/images/docker/10.jpg)
 * 第二次运行后，查看日志后如果正常，则可在运行结束后移除环境变量`cloud_username`和`cloud_password`
 ![](/images/docker/11.jpg)
 
+## 如果出现意外退出错误请忽略
 
 </details>
 
@@ -156,8 +145,6 @@ docker run --rm --name mdc -it \
 docker run --rm --name mdc -it \
   -v ${PWD}/test:/source \
   -v ${PWD}/output:/output \
-  -v ${PWD}/test-o:/source-o \
-  -v ${PWD}/output-o:/output-o \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
@@ -165,6 +152,8 @@ docker run --rm --name mdc -it \
   -e NAME=MDC-Docker
   -e cloud_username=USERNAME \
   -e cloud_password=PASSWORD \
+  -e cloud_config_instance="Default" \
+  -e local_config_file="mdc.ini" \
   mvdctop/mdc
 ```
 
@@ -175,8 +164,6 @@ docker run --rm --name mdc -it \
 docker run --rm --name mdc -it \
   -v ${PWD}/test:/source \
   -v ${PWD}/output:/output \  
-  -v ${PWD}/test-o:/source-o \
-  -v ${PWD}/output-o:/output-o \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
