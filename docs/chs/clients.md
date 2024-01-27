@@ -44,7 +44,7 @@
 
 #### 以下教程二选一
 
-## 各大NAS系统
+## NAS系统
 
 <details>
 
@@ -54,11 +54,11 @@
 * 创建容器，设置环境变量
 
 * 根据阁下的[注册](https://docs.mvdc.top/chs/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7)的用户名和密码，且已经激活，填写`cloud_username`和`cloud_password`  
-  可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果刮削或整理**其他**影片，则添加`-o`  
-  如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`自定义本地配置文件
+* 可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，刮削**其他**影片则添加`-o`  
+* 如指定自定义配置，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`为在容器`/config/.mdc`对应宿主目录下的配置文件名
 
 * DSM首个新建用户的`UID`为1026，无需设置；Unraid请设置为99  
-  其他系统：连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
+* 其他系统：连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
 
 * **不勾选**完成后运行此容器
 
@@ -143,13 +143,13 @@ docker run --rm --name mdc -it \
 ### 运行容器
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/test:/source \
+  -v ${PWD}/source:/source \
   -v ${PWD}/output:/output \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
   -e ARGS="" \
-  -e NAME=MDC-Docker
+  -e NAME=MDC-Docker \
   -e cloud_username=USERNAME \
   -e cloud_password=PASSWORD \
   -e cloud_config_instance="Default" \
@@ -162,7 +162,7 @@ docker run --rm --name mdc -it \
 * 非首次运行，可以删除`cloud_username`和`cloud_password`，登录凭据已被写入配置
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/test:/source \
+  -v ${PWD}/source:/source \
   -v ${PWD}/output:/output \  
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
