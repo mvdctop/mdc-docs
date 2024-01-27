@@ -1,4 +1,4 @@
-import { defaultTheme } from 'vuepress@next'
+import { defaultTheme } from 'vuepress'
 
 export default {
   theme: defaultTheme({
