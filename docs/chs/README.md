@@ -31,7 +31,7 @@
 🟢 **一年** 110`HKD` 99`CNY` 14`USDT`  
 🟢 **半年** 50 `CNY`
 
-* 台灣及其他地区，可在WISE匯款至香港FPS，[點擊](https://wise.com/zh-hk/send-money/send-money-to-fps-id#calculator)匯款，FPS ID: `106254626` Name: `mdc mdc`
+* 其他地區（香港除外），通過WISE匯款，[點擊](/chs/payments.md)查看WISE教程
 
 * **直接发送付款截图**，不用问`在吗`，私聊[Telegram](https://t.me/yoshiko2_dev)或发送邮箱`yoshiko2.dev@gmail.com`，邮件标题：`付款截图`  
   永久只需发送附加用户名无需手动激活
