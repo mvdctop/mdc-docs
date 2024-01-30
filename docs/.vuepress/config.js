@@ -5,6 +5,7 @@ export default {
     locales: {
       '/en/': {
         selectLanguageName: 'English',
+        contributors: false,
         navbar: [
           {
             text: 'Offical website',
@@ -22,6 +23,7 @@ export default {
       },
       '/chs/': {
         selectLanguageName: '简体中文',
+        contributors: false,
         navbar: [
           {
             text: '官网',
@@ -99,6 +101,7 @@ export default {
       },
       '/cht/': {
         selectLanguageName: '繁體中文',
+        contributors: false,
         navbar: [
           {
             text: '官網',
