@@ -48,9 +48,6 @@ success_folder =
 ### language
 程序语言 默认空为`eng` 可选`chs`简体中文 `cht`繁体中文
 
-### sync_time
-同步时间 记录客户端GUI下显示同步时间 CLI无作用 每次运行都会同步用户配置
-
 ### source_folders
 输入目录 该值请输入为列表 实例如下 请勿重复输入
 ```ini
