@@ -4,9 +4,9 @@
 🟢 精確到刮削x季x集，檔名**必須**包含`SxxExx` `x季x集` `x季x集/話/話` `x季x`  
 
 ## 建議的命名
-`行屍走肉.S01E01.2010.mp4`
-`The.Vampire.Diaries.S01E13.2010.720p.BluRay.x264.AC3-CMCT.mkv`
-`[某某電影-www.dyxxx.org]惡人傳記-01集.mp4`
+`行屍走肉.S01E01.2010.mp4`  
+`The.Vampire.Diaries.S01E13.2010.720p.BluRay.x264.AC3-CMCT.mkv`  
+`[某某電影-www.dyxxx.org]惡人傳記-01集.mp4`  
 
 # 影片命名規則
 

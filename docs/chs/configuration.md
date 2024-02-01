@@ -26,21 +26,21 @@
 申请教程可谷歌搜索`TMDB API KEY申请`
 
 ## 命名规则设置
-| 变量 | 解释 |
-|----|----|
-| `title` | 片名 |
+| 变量 | 解释         |
+|----|------------|
+| `title` | 片名         |
 | `original_title` | 原生片名（未翻译片名） |
-| `actor` | 演员 |
-| `studio` | 公司 |
-| `director` | 导演 |
-| `release` | 发售日 |
-| `year` | 发行年份 |
-| `number` | 影片号码/F号 |
-| `cover` | 封面链接|
-| `tag` | 类型 |
-| `outline` | 简介 |
-| `runtime` | 时长 |
-| `series` | 系列 |
+| `actor` | 演员         |
+| `studio` | 公司         |
+| `director` | 导演         |
+| `release` | 发售日        |
+| `year` | 发行年份       |
+| `number` | 影片号码       |
+| `cover` | 封面链接       |
+| `tag` | 类型         |
+| `outline` | 简介         |
+| `runtime` | 时长         |
+| `series` | 系列         |
 
 上面的参数以下都称之为**变量**
 
