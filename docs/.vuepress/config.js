@@ -116,6 +116,66 @@ export default {
             link: 'https://github.com/yoshiko2/movie_data_capture/releases',
           },
         ],
+        sidebar: [
+          {
+            text: '首頁',
+            link: '/cht/README.md',
+          },
+          {
+            text: '檔案命名規則',
+            link: '/cht/naming.md',
+          },
+          {
+            text: '各客戶端使用方式',
+            link: '/cht/clients.md',
+          },
+          {
+            text: '命令列參數與設定檔編輯',
+            link: '/cht/cli.md',
+          },
+          {
+            text: '客戶端本地配置',
+            link: '/cht/client_configuration.md',
+          },
+          {
+            text: '雲端配置',
+            link: '/cht/configuration.md',
+          },
+          {
+            text: '雲端碟掛載與NAS相關說明',
+            link: '/cht/cloud_mount.md',
+          },
+          {
+            text: 'BUG報告與功能建議',
+            link: '/cht/bug_report.md',
+          },
+          {
+            text: '錯誤處理',
+            link: '/cht/error.md',
+          },
+          {
+            text: '清空配置',
+            link: '/cht/clean_config.md',
+          },
+          {
+            text: '法律文件',
+            link: '/cht/laws/README.md',
+            children: [
+              {
+                text: '最終使用者條款',
+                link: '/cht/laws/eula.md'
+              },
+              {
+                text: '隱私權政策',
+                link: '/cht/laws/privacy.md'
+              },
+              {
+                text: '免責聲明',
+                link: '/cht/laws/disclaimer.md'
+              },
+            ],
+          },
+        ],
       },
     },
   }),
