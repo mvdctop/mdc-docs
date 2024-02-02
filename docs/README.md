@@ -1,4 +1,4 @@
 # 文A
 # [简体中文](/chs/README.md)
 # [繁體中文](/cht/README.md)
-# [English (Bulding)](/en/README.md)
+# [English (Building)](/en/README.md)
