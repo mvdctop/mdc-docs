@@ -32,7 +32,7 @@
 
 * 其他地區（香港除外），通過WISE匯款，[點擊](/cht/payments.md)查看WISE教程
 
-* **直接寄付款截圖**，不用問`在嗎`，私聊[Telegram](https://t.me/yoshiko2_dev)或寄信箱`yoshiko2.dev@gmail.com`，電子郵件標題：`付款截圖`
+* **直接寄付款截圖**，不用問`在嗎`，發送Email`yoshiko2.dev@gmail.com`，Email標題：`付款截圖`
   永久只需發送附加用戶名無需手動激活
 
 * 將盡快向閣下發送激活訊息，最快秒回最晚12小時內，**請勿Telegram和郵箱重複發送**
