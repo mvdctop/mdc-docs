@@ -2,13 +2,14 @@
 ## 運行參數
 以下所有參數為可選參數
 * `file` [單一檔案模式](#單一檔案模式) file為檔案路徑
+* `-b` `--backend-hosting` 後台託管模式，依據當前雲端配置選擇是`每天指定運行時間`或`休眠指定分鐘後運行`
 * `-cli` 開啟命令列模式
 * `-login u=xxx,p=xxx` 登錄，首次輸入後續可自動登入
 * `-g` 調試模式
 * `-t` 名稱擷取模式
 * `-s` 為輸出目錄下無字幕影片新增字幕
 * `-o` 其他模式
-* `-cc` `--cloud-config-instance` 雲端設定實例選擇，預設`Default`，如選擇名為`test1`的雲端設定實例`--cloud-config-instance "test1"` 或`- cc "test1"`
+* `-cc` `--cloud-config-instance` 雲端配置實例選擇，預設`Default`，如選擇名為`test1`的雲端配置實例`--cloud-config-instance "test1"` 或`- cc "test1"`
 * `-lc` `--local-config-file` 本機設定文件，預設`mdc.ini`，如選擇名為`mdc_test.ini`的本機設定檔`--local-config-file "mdc_test.ini "` 或`-lc "mdc_test.ini"`
 * `-C` 本機設定檔覆蓋模式，僅限於覆寫客戶端本機配置，如輸入輸出目錄配置，多個配置使用`;`分隔，實例如下
 ```shell
@@ -64,7 +65,7 @@ success_folder = /home/test/output
 ```
 
 ### cloud_config_instance
-選擇一般電影雲端設定實例，預設為`Default`，如自訂請填入新配置實例名稱
+選擇一般電影雲端配置實例，預設為`Default`，如自訂請填入新配置實例名稱
 如果實例名稱不存在，則會使用`Default`
 ```ini
 [common]
@@ -72,7 +73,7 @@ cloud_config_instance = Default
 ```
 
 ### cloud_config_instance_other
-選擇其他電影雲端設定實例，預設為`Default`，如自訂請填入新配置實例名稱
+選擇其他電影雲端配置實例，預設為`Default`，如自訂請填入新配置實例名稱
 如果實例名稱不存在，則會使用`Default`
 ```ini
 [common]

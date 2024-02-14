@@ -67,6 +67,7 @@
 | 多集影片 | `xxx-777-CD1.mp4` `xxx-777-CD2.mp4` 包含其他後綴情況下-CD放最後 |
 | DMM/FANZA | `test00114.mp4` |
 | FC2 | `FC2-666666.mp4` |
+| Fantia | `FANTIA-666666.mp4` |
 | DLsite | `VJ555555.mp4` `RJ444444.mp4` |
 | Getchu | `GETCHU-123456.mp4` `item654321.mp4` |
 | Gcolle | `gcolle-987654.mp4` |
