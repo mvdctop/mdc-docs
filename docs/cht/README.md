@@ -30,7 +30,7 @@
 
 * **新春期間照常回復**
 
-* 其他地區（香港除外），通過WISE匯款，[點擊](/cht/payments.md)查看WISE教程
+* 其他地區，通過WISE匯款，[點擊](/cht/payments.md)查看WISE教程
 
 * **直接寄付款截圖**至Email`yoshiko2.dev@gmail.com`，Email標題：`付款截圖`
   永久只需發送附加用戶名無需手動激活
