@@ -91,3 +91,6 @@
 
 ### 售后联系
 yoshiko2.dev@gmail.com
+
+### 友情链接
+[CloudDrive](https://www.clouddrive2.com/)

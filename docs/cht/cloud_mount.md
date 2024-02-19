@@ -1,6 +1,6 @@
 # 雲端碟掛載工具使用
 ### Windows請確保在`此電腦`中，NAS磁碟位於`網路位置`，而不是`裝置與磁碟機`
-如果閣下使用`CloudDrive`, `RaiDrive`, `Alist`等本地雲端磁碟掛載工具
+如果閣下使用[CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, `Alist`等本地雲端磁碟掛載工具
 請確保在掛載工具中，掛載的碟符類型為`網路碟`，否則可能會導致程式執行出錯
 程式放置在本機磁碟中啟動
 
