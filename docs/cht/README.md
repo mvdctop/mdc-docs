@@ -28,8 +28,6 @@
 🟢 **永久** 440`HKD` 56`USDT` 399`CNY` （原價555，内測階段限時優惠）  
 🟢 **一年** 110`HKD` 14`USDT` 110`CNY`
 
-* **新春期間照常回復**
-
 * 其他地區，通過WISE匯款，[點擊](/cht/payments.md)查看WISE教程
 
 * **直接寄付款截圖**至Email`yoshiko2.dev@gmail.com`，Email標題：`付款截圖`
