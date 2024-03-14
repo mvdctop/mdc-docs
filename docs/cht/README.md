@@ -18,7 +18,7 @@
 * 請關注[Telegram頻道](https://t.me/mvdc_news) 以取得最新通知
 
 ## 1. 在網頁端的[用戶面板](https://user.mvdc.top)註冊帳號
-* 可在網頁端登入後，進行個人化[設定](https://user.mvdc.top/configuration/general)
+* 可在網頁端登入後，進行個人化[設定](https://user.mvdc.top/configuration/general)，新用戶建議使用當前默認設定
 * 雲端配置支援多個配置實例，可新增多個雲端配置實例，應對不同類型的影片
   *（可選）如果頻繁使用或對資料精準有要求，建議閣下申請[TMDB API KEY](/cht/configuration.html#tmdb-api-key)填入雲端設定中
 
@@ -45,7 +45,7 @@
 
 ## 4. 開啟用戶端 登入帳號
 * 第一次打開，可在`Language`欄中選擇語言
-* 每個帳號最多可登入3台設備，兩種配置各6個雲端配置實例
+* 每個帳號最多可登入3台設備，兩種配置各最多6個雲端配置實例
 
 ![](/images/readme1.png)
 

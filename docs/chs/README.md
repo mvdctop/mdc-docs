@@ -18,7 +18,7 @@
 * 关注[Telegram频道](https://t.me/mvdc_news) 获得最新通知
 
 ## 1. 在网页端的[用户面板](https://user.mvdc.top)注册账号
-* 可在网页端登录后，进行个性化[配置](https://user.mvdc.top/configuration/general)
+* 可以进行个性化[配置](https://user.mvdc.top/configuration/general)，新用户建议使用当前默认配置
 * 云配置支持多个配置实例，可添加多个云配置实例，应对不同类型的影片
 * （可选）如果频繁使用或对数据精准有要求，建议阁下申请[TMDB API KEY](/chs/configuration.html#tmdb-api-key)填入云配置中
 
@@ -28,6 +28,7 @@
 ### 当前内测阶段价格
 🟢 **永久** 399`CNY` 56`USDT` （原价499，内测阶段限时优惠）  
 🟢 **一年** 99 `CNY` 14`USDT`
+🟢 **半年** 55 `CNY`
 
 * **直接发送付款截图**至邮箱`yoshiko2.dev@gmail.com`，邮件标题：`付款截图`  
   永久只需发送附加用户名无需手动激活
@@ -44,7 +45,7 @@
 
 ## 4. 打开客户端 登录账号
 * 首次打开，可在`Language`栏中选择语言
-* 每个账号最多可登录3台设备，两种配置各6个云配置实例
+* 每个账号最多可登录3台设备，两种配置各最多6个云配置实例
 
 ![](/images/readme1.png)
 
