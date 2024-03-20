@@ -17,7 +17,7 @@ export default {
           },
           {
             text: 'Download',
-            link: 'https://github.com/yoshiko2/movie_data_capture/releases',
+            link: 'https://dl.mvdc.top',
           },
         ],
       },
@@ -35,7 +35,7 @@ export default {
           },
           {
             text: '下载',
-            link: 'https://github.com/yoshiko2/movie_data_capture/releases',
+            link: 'https://dl.mvdc.top',
           },
         ],
         sidebar: [
@@ -113,7 +113,7 @@ export default {
           },
           {
             text: '下載',
-            link: 'https://github.com/yoshiko2/movie_data_capture/releases',
+            link: 'https://dl.mvdc.top',
           },
         ],
         sidebar: [
