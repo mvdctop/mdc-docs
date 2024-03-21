@@ -37,8 +37,6 @@
 
 ![](/images/pay.png)
 
-### 已停止7.0前版本的支持，繼續使用舊版可能會導致資料錯亂或遺失
-
 ## 3. [下載](https://dl.mvdc.top) 本機用戶端
 * 下載前請閱讀[各客戶端使用方式](/cht/clients.html)
 * 强烈建議在使用Docker版本前，先使用Windows或macOS版本
