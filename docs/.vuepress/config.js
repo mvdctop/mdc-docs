@@ -2,6 +2,7 @@ import { defaultTheme } from 'vuepress'
 
 export default {
   theme: defaultTheme({
+    contributors: false,
     locales: {
       '/en/': {
         selectLanguageName: 'English',
