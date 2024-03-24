@@ -32,7 +32,7 @@
 
 * 其他地區，通過WISE匯款，[點擊](/cht/payments.md)查看WISE教程
 
-* **直接寄付款截圖**至Email`yoshiko2.dev@gmail.com`，Email標題：`付款截圖`
+* 内測階段人工處理，**直接發送付款截圖**至Email`yoshiko2.dev@gmail.com`，Email標題：`付款截圖`
   永久只需發送附加用戶名無需手動激活
 
 * 將盡快向閣下發送激活訊息，最快秒回最晚12小時內
