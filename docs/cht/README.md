@@ -69,4 +69,6 @@
 系統使用者所在目錄下的 `.mdc/logs`
 
 ### 售後聯繫
+重設密碼，BUG反饋等
+## Email
 yoshiko2.dev@gmail.com

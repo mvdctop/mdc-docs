@@ -70,4 +70,6 @@
 系统用户所在目录下的 `.mdc/logs`
 
 ### 售后联系
+重设密码，BUG反馈等
+## 邮箱
 yoshiko2.dev@gmail.com
