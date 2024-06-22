@@ -50,14 +50,12 @@
 上面的參數以下都稱為**變數**
 
 ## 自訂規則方法
-有兩種元素，變數和字符，無論是任何一種元素之間連接必須要用加號 `+`
-例如：`'['+number+']-'+title`，其中冒號 `''` 內的文字是字符，沒有冒號包含的文字是變量，元素之間連接必須要用加號 `+`
 請勿使用`%` `$` `&`等字符
 
-* `genres+'/'+title`
-* `'#'+genres+'/'+title`
-* `actor+'/'+number`
-* `'#'+actor+'/'+number`
+* `genres/title`
+* `actor/[number]-title`
+* `actor/number`
+* `#actor/number`
 
 ## 元資料檔案標題命名規則
 這是NFO檔案內`<title>`欄位命名規則，與檔案名稱和資料夾名無關，用於在Emby, Jellyfin, Plex中顯示標題

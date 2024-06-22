@@ -50,14 +50,12 @@ Exclude this folder when scanning. If there are multiple folders, use `,`, for e
 The above parameters are called **variables** below.
 
 ## Custom rule method
-There are two kinds of elements, variables and characters. The plus sign `+` must be used to connect any kind of elements.
-For example: `'['+number+']-'+title`, in which the text within the colon `''` is a character, and the text contained without a colon is a variable. The plus sign `+` must be used to connect the elements.
 Do not use characters such as `%` `$` `&`
 
-* `genres+'/'+title`
-* `'#'+genres+'/'+title`
-* `actor+'/'+number`
-* `'#'+actor+'/'+number`
+* `genres/title`
+* `actor/[number]-title`
+* `actor/number`
+* `#actor/number`
 
 ## Metadata file title naming rules
 This is the naming rule for the `<title>` field in the NFO file. It has nothing to do with the file name and folder name. It is used to display the title in Emby, Jellyfin, and Plex.
