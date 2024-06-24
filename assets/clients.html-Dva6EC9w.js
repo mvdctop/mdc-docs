@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0119854a","path":"/clients.html","title":"Linux","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"Allow any source program to run","slug":"allow-any-source-program-to-run","link":"#allow-any-source-program-to-run","children":[]}],"git":{"updatedTime":1719254740000},"filePathRelative":"clients.md"}');export{e as data};
