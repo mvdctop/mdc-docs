@@ -69,4 +69,4 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 `.mdc/logs` in the directory where the system user is located
 
 ### After-sales contact
-yoshiko2.dev@gmail.com
+support@mvdc.top

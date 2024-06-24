@@ -1,4 +1,4 @@
-### In order to facilitate event tracking, please send an email according to the following template `yoshiko2.dev@gmail.com`
+### In order to facilitate event tracking, please send an email according to the following template `support@mvdc.top`
 
 # Report a bug
 ## mail title

@@ -72,4 +72,4 @@
 ### 售后联系
 重设密码，BUG反馈等
 ## 邮箱
-yoshiko2.dev@gmail.com
+support@mvdc.top
