@@ -27,7 +27,7 @@
 
 ![](/images/readme1.png)
 
-* 可以进行个性化[配置](https://user.mvdc.top/configuration/general)，新用户建议使用当前默认配置
+* 可以进行个性化[云配置](https://user.mvdc.top/configuration/general)，新用户建议使用当前默认配置
 * 云配置支持多个配置实例，可添加多个云配置实例，应对不同类型的影片
 * 每个账号最多可登录3台设备，两种配置各最多6个云配置实例
 * （可选）如果频繁使用或对数据精准有要求，建议阁下申请[TMDB API KEY](/chs/configuration.html#tmdb-api-key)填入云配置中
@@ -37,7 +37,7 @@
 * 付款完成后自动激活订阅
 * 支持多种支付方式
 
-## 4. 客户端配置
+## 4. 本地配置
 * 在`本地配置`页面中，配置刮削目录与输出目录
 
 ![](/images/readme2.png)

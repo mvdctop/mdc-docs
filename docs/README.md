@@ -39,8 +39,8 @@
 * Subscription will be automatically activated after payment is completed
 * Multiple payment methods are supported
 
-## 4. Client settings
-* Set the scraping folder and output folder in the local client settings page
+## 4. Local Configuration
+* Set the scraping folder and output folder in the `Local Configuration` page
 
 ![](/images/readme2_en.png)
 
