@@ -25,7 +25,7 @@
 
 ## 2. Register an account and log in
 * Register an account at the [User Panel] (https://user.mvdc.top) on the web page
-* Open the client and click `Login`
+* Click `Login` in Client
 
 ![](/images/readme1_en.png)
 
