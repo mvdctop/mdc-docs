@@ -24,7 +24,11 @@
 * It is strongly recommended to use the Windows or macOS version before using the Docker version
 
 ## 2. Register an account and log in
-* Register an account and log in at the [User Panel] (https://user.mvdc.top) on the web page
+* Register an account at the [User Panel] (https://user.mvdc.top) on the web page
+* Open the client and click `Login`
+
+![](/images/readme1_en.png)
+
 * You can personalize [settings] after logging in on the web (https://user.mvdc.top/configuration/general). New users are recommended to use the current default settings.
 * Cloud configuration supports multiple configuration instances, and multiple cloud configuration instances can be added to handle different types of videos
 * Each account can log in to up to 3 devices, and each of the two configurations can have up to 6 cloud configuration instances.
@@ -37,6 +41,8 @@
 
 ## 4. Client settings
 * Set the scraping folder and output folder in the local client settings page
+
+![](/images/readme2_en.png)
 
 * By default, the input folder is the directory where the program is located, and the output folder is the newly created `output` folder in the directory where the program is located.
 
