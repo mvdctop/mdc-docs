@@ -59,7 +59,7 @@ Used to scrape movies sold in Japan that are named after numbers, for example:
 ### No need to judge case
 
 | Video type | File name |
-|----------------|-------------------------------- -----------------------|
+|----------------|-------------------------------------------------------|
 | Ordinary video | `xxx-888.mp4` |
 | Multi-episode videos | `xxx-777-CD1.mp4` `xxx-777-CD2.mp4` If other suffixes are included - CD is placed last |
 | DMM/FANZA | `test00114.mp4` |
