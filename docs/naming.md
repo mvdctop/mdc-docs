@@ -6,16 +6,16 @@
 🟢 Accurate to scrape x season x episode, the file name **must** contain `SxxExx` `x season x episode` `x season  
 
 ### Episode naming
-`The.Walking.Dead.S01E01.2010.mp4`
+`The.Walking.Dead.S01E01.2010.mp4`  
 `The.Vampire.Diaries.S01E13.2010.720p.BluRay.x264.AC3-CMCT.mkv`
 
 ## Video naming
 ![](/images/example33.png)
 
-`Inception.2010.UHD.BluRay.1080p.DTS.HDR.x265-TnP.mkv`
-`Kung.Fu.Hustle.2004.BluRay.1080p.x265.10bit.2Audio.MNHD-FRDS.mkv`
-`The Martian.2015.mp4`
-`Resident Evil.2002.1080p.mp4`
+`Inception.2010.UHD.BluRay.1080p.DTS.HDR.x265-TnP.mkv`  
+`Kung.Fu.Hustle.2004.BluRay.1080p.x265.10bit.2Audio.MNHD-FRDS.mkv`  
+`The Martian.2015.mp4`  
+`Resident Evil.2002.1080p.mp4`  
 
 ### Naming suffix
 
