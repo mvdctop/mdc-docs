@@ -51,6 +51,8 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 
 ## 5. According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page
 
+![](/images/scraping_type_en.png)
+
 * Please perform name extraction to check whether it meets expectations before processing the video
 * If you find that the extracted name does not match the expected video, please rename it manually.
 
