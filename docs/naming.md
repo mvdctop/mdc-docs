@@ -1,5 +1,7 @@
 # General video or series naming rules
 
+<details>
+
 ### Episode naming rules
 🟢 To scrape episodes, the file name must contain at least `x episodes/episodes/episodes`, `EPxx`  
 🟢 If the file name is only `x episode/episode/episode` `EPxx` and does not contain `x season`, `SxxExx`, it will be recognized as episode x of **Season 1** by default  
@@ -46,11 +48,14 @@ Please open the folded content below to view
 
 </details>
 
----
+</details>
 
 ---
 
-# other movies
+# Other Movies
+
+<details>
+
 Used to scrape movies sold in Japan that are named after numbers, for example:
 > The following pictures are from the Internet and are for reference only. The copyright belongs to the copyright holder.
 
@@ -99,5 +104,7 @@ Create a new `watermarks` directory under the `.mdc` directory in the current us
 | Outflow | `LEAK.png` |
 | VR | `VR.png` |
 | Infantry | `UNCENSORED.png` |
+
+</details>
 
 </details>

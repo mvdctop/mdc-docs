@@ -49,9 +49,7 @@
 ### External subtitle file
 If the prefix of the subtitle file name in the 'scraping directory' is the same as the prefix of the video file, it will be automatically moved to the same directory as the video in subsequent processing, and the 'subtitles' tag will be added to the NFO metadata file label. And add a floating watermark to the cover (can be turned on or off in the web cloud settings page)
 
-## 5. Check the file naming, please refer to [File Naming Rules](/naming.html)
-
-* **According to the video type, select the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page**
+## 5. According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page
 
 * Please perform name extraction to check whether it meets expectations before processing the video
 * If you find that the extracted name does not match the expected video, please rename it manually.
