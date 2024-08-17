@@ -1,4 +1,4 @@
-# General video or series naming rules
+# General Movie or Episode 
 
 <details>
 
@@ -52,7 +52,7 @@ Please open the folded content below to view
 
 ---
 
-# Other Movies
+# Other Movie
 
 <details>
 
