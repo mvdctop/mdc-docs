@@ -74,4 +74,4 @@
 ### 售後聯繫
 * Email: `support@mvdc.top`
 
-重設密碼，BUG反饋等
+重設密碼，BUG反饋，支付異常等

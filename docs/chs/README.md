@@ -75,4 +75,4 @@
 ### 售后联系
 * Email: `support@mvdc.top`
 
-重设密码，BUG反馈等
+重设密码，BUG反馈，支付异常等

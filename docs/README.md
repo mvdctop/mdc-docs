@@ -76,4 +76,4 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 ### After-sales contact
 * Email: `support@mvdc.top`
 
-Reset Password, BUG Report and more
+Reset Password, BUG Report, Payment Exception and more
