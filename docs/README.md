@@ -57,7 +57,6 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 * If you find that the extracted name does not match the expected video, please rename it manually.
 
 ## 6. Run
-* To ensure data security, it is tentatively planned to process up to 1,000 videos per execution. If you need to process more than 1,000 local videos, please check the processing status after each execution is completed and continue running.
 
 * If you have modified the cloud configuration on the web page after **logging in** on the client, please click `Synchronize` on the **client**`Configuration` page before clicking `Run` before running the configuration
 
@@ -75,4 +74,6 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 `.mdc/logs` in the directory where the system user is located
 
 ### After-sales contact
-support@mvdc.top
+* Email: `support@mvdc.top`
+
+Reset Password, BUG Report and more
