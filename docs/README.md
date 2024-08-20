@@ -73,7 +73,16 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 ## Access program log
 `.mdc/logs` in the directory where the system user is located
 
-### After-sales contact
-* Email: `support@mvdc.top`
 
-Reset Password, BUG Report, Payment Exception and more
+## Contact Us
+
+If you encounter any of the following issues or have any suggestions, please feel free to contact us through the following methods:
+
+- **Reset Password**
+- **Bug Reports**
+- **Payment Issues**
+- **Feedback and Suggestions**
+
+Please send an email to: `support@mvdc.top`
+
+We will assist you as soon as possible
