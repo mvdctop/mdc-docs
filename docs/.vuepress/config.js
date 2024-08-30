@@ -65,20 +65,6 @@ export default {
           {
             text: 'Legal document',
             link: '/laws/README.md',
-            children: [
-              {
-                text: 'End User Terms',
-                link: '/laws/eula.md'
-              },
-              {
-                text: 'Privacy Policy',
-                link: '/laws/privacy.md'
-              },
-              {
-                text: 'Disclaimer',
-                link: '/laws/disclaimer.md'
-              },
-            ],
           },
         ],
       },
@@ -143,20 +129,6 @@ export default {
           {
             text: '法律文件',
             link: '/chs/laws/README.md',
-            children: [
-              {
-                text: '最终用户条款',
-                link: '/chs/laws/eula.md'
-              },
-              {
-                text: '隐私政策',
-                link: '/chs/laws/privacy.md'
-              },
-              {
-                text: '免责声明',
-                link: '/chs/laws/disclaimer.md'
-              },
-            ],
           },
         ],
       },
@@ -221,20 +193,6 @@ export default {
           {
             text: '法律文件',
             link: '/cht/laws/README.md',
-            children: [
-              {
-                text: '最終使用者條款',
-                link: '/cht/laws/eula.md'
-              },
-              {
-                text: '隱私權政策',
-                link: '/cht/laws/privacy.md'
-              },
-              {
-                text: '免責聲明',
-                link: '/cht/laws/disclaimer.md'
-              },
-            ],
           },
         ],
       },
