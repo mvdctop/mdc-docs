@@ -57,6 +57,9 @@ Do not use characters such as `%` `$` `&`
 * `actor/number`
 * `#actor/number`
 
+## Media File Naming with Extension
+After the media file is successfully processed, it will be opened with a suffix such as `-4K` `-VR` `-C`
+
 ## Metadata file title naming rules
 This is the naming rule for the `<title>` field in the NFO file. It has nothing to do with the file name and folder name. It is used to display the title in Emby, Jellyfin, and Plex.
 
