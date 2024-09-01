@@ -66,6 +66,10 @@ export default {
             text: 'Legal document',
             link: '/laws/README.md',
           },
+          {
+            text: 'Contact us',
+            link: '/contact.md',
+          },
         ],
       },
       '/chs/': {
@@ -130,6 +134,10 @@ export default {
             text: '法律文件',
             link: '/chs/laws/README.md',
           },
+          {
+            text: '联系我们',
+            link: '/chs/contact.md',
+          },
         ],
       },
       '/cht/': {
@@ -193,6 +201,10 @@ export default {
           {
             text: '法律文件',
             link: '/cht/laws/README.md',
+          },
+          {
+            text: '联系我们',
+            link: '/cht/contact.md',
           },
         ],
       },
