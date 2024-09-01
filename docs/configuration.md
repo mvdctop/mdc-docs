@@ -31,21 +31,22 @@ For the application tutorial, you can search on Google for `TMDB API KEY applica
 Exclude this folder when scanning. If there are multiple folders, use `,`, for example `aa,bb,cc`
 
 # Naming rule settings
-| Variable | Explanation |
-|----|------------|
-| `title` | film title |
+| Variable | Explanation                         |
+|----|-------------------------------------|
+| `title` | film title                          |
 | `original_title` | Original title (untranslated title) |
-| `actor` | actor |
-| `studio` | company |
-| `director` | director |
-| `release` | Release date |
-| `year` | Year of release |
-| `number` | Video number |
-| `cover` | cover link |
-| `tag` | type |
-| `outline` | Introduction |
-| `runtime` | duration |
-| `series` | series |
+| `actor` | actor                               |
+| `studio` | company                             |
+| `director` | director                            |
+| `release` | Release date                        |
+| `year` | Year of release                     |
+| `number` | Video number                        |
+| `cover` | cover link                          |
+| `tag` | type                                |
+| `outline` | Introduction                        |
+| `runtime` | runtime                             |
+| `series` | Series                              |
+| `prefix`         | mumber prefix                       |
 
 The above parameters are called **variables** below.
 
