@@ -22,10 +22,10 @@ Generate the NFO file directly in the folder where the video is located, downloa
 
 # Deep Search
 It may not be possible to obtain complete data on a single website. Therefore, the deep search function will visit the websites set in the `Search Website Order` in sequence.
-The program will continue searching until data is obtained in the `Deep Search Fields` or all specified websites are traversed.
+The program will continue searching until data is obtained in the `Deep Search Fields` or all specified websites are traversed, Implementing data aggregation
 
-* Turning it on will extend the file processing and completion sleep time.
-It may trigger anti-crawl on some websites.
+* Turning it on will extend the file processing and completion sleep time.  
+  It may trigger anti-crawl on some websites.
 
 # TMDB API KEY
 * Optional fields
