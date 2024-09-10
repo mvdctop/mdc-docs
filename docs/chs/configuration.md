@@ -98,9 +98,9 @@
 ## 水印风格
 * 参考水印文字语言为英文
 ### 经典
-![/images/watermark1.png]()
+![](/images/watermark1.png)
 ### X风格
-![/images/watermark2.png]()
+![](/images/watermark2.png)
 
 ## 字段转换设置
 [自定义字段映射表](/chs/client_configuration.html#自定义字段映射表)

@@ -98,9 +98,9 @@ When extracting the number, eliminate characters that interfere with the extract
 ## Watermark Type
 * The reference watermark text language is English
 ### Classic
-![/images/watermark1.png]()
+![](/images/watermark1.png)
 ### X Style
-![/images/watermark2.png]()
+![](/images/watermark2.png)
 
 ## Field conversion settings
 [Custom field mapping table](/client_configuration.html#custom-field-mapping-table)

@@ -98,9 +98,9 @@
 ## 水印風格
 * 參考水印文字語言為英文
 ### 經典
-![/images/watermark1.png]()
+![](/images/watermark1.png)
 ### X風格
-![/images/watermark2.png]()
+![](/images/watermark2.png)
 
 ## 字段轉換設定
 [自訂字段對應表](/cht/client_configuration.html#自訂欄位對應表)
