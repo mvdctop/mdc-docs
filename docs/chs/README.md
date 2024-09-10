@@ -17,7 +17,7 @@
 * 本程序和网站**不提供任何影片的下载途径 仅供个人文件整理使用**
 
 ## 1. [下载](https://dl.mvdc.top)并运行，建议全局代理使用
-* 首次打开，可在`Language`栏中选择语言
+* 首次打开，可在`Language`栏中选择语言，`简体中文` `繁體中文` `English`
 * 除Windows系统外，下载前请阅读[各客户端使用方式](/chs/clients.html)
 * 强烈建议在首次使用Docker版本前，先使用Windows或macOS版本
 
