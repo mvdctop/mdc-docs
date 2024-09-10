@@ -22,7 +22,7 @@ Generate NFO files directly in the folder where the video is located, and downlo
 Generate the NFO file directly in the folder where the video is located, download the two cover images, and rename the video file to `Video name.Year.Suffix name`
 
 ## Download Missing Images Only
-Applicable to `3.Update existing NFO and Images` in the main running mode. Only the current pictures will be downloaded, and existing pictures will not be overwritten again.
+Applicable to `3.Update existing NFO and Images` in the main running mode. Only the missing images will be downloaded, and existing images won't be overwritten again.
 
 ## Actor-Only Tag
 When turned on, the `<tag>` field of the metadata file with the `.NFO` extension will only be filled with the actor's name.
