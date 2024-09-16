@@ -15,6 +15,9 @@
 ✅ **Metadata acquisition and cover download**: According to the cloud configuration, metadata scraping and cover download of local videos are performed  
 ✅ **Multi-Client Support**: Supports using multiple cloud configuration instances on multiple local clients using the same account  
 
+## Contact us
+[Contact us](/contact.html)
+
 # Use tutorial
 
 * This program and website** do not provide any video download method and are only used for personal file organization**
