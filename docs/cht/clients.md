@@ -7,14 +7,14 @@
 * 在`終端`執行 `sudo spctl --master-disable` 密碼為使用者登陸密碼
 
 # Docker （實驗性）
-* 注意，因為Docker檔案系統的特殊性，請仔細閱讀以下操作指南後再行使用，開發者對使用者**因未仔細閱讀文件**造成使用不當導致的文件遺失、損壞均不負責
+* 注意，因為Docker檔案系統的特殊性，請仔細閱讀以下操作指南後再行使用，開發者對使用者**因未仔細閱讀檔案**造成使用不當導致的檔案遺失、損壞均不負責
 * **無需設置任何網絡端口**
 
 ## 强烈建議在首次使用Docker版本之前，先使用Windows或macOS版本
 
 ## 與其他客戶端一些不同之處
-*失敗處理記錄檔`failed_list.txt`，存放於容器目錄`/config`中
-* 目前Docker版本只支援兩種影片模式各**一個**刮削目錄
+*失敗處理記錄檔`failed_list.txt`，存放於容器資料夾`/config`中
+* 目前Docker版本只支援兩種影片模式各**一個**刮削資料夾
 
 ## 環境變數
 
@@ -24,7 +24,7 @@
 |:------|:-----|:-------|
 | UID | uid | 1026 |
 | GID | gid | 100 |
-| UMASK | source, output目錄的umask | 002 |
+| UMASK | source, output資料夾的umask | 002 |
 | NAME | 網頁端顯示的裝置名稱 | MDC-Docker |
 | ARGS | [運行參數](/cht/cli.html# 運行參數) | 無 |
 | cloud_username | 網頁端的使用者名稱 | 無 |
@@ -35,9 +35,9 @@
 ## 卷
 | Docker卷      | 解釋     |
 |:-------------|:-------|
-| 自訂           | 媒體數據目錄 |
-| /subs        | 影片字幕目錄 |
-| /config/.mdc | 設定檔目錄  |
+| 自訂           | 媒體數據資料夾 |
+| /subs        | 影片字幕資料夾 |
+| /config/.mdc | 設定檔資料夾  |
 
 #### 以下教程二选一
 
@@ -52,24 +52,24 @@
 
 * 依閣下的[註冊](https://docs.mvdc.top/cht/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7% 9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F% B7)的使用者名稱和密碼，且已被激活，填入`cloud_username`和`cloud_password`
 * 可依需要填入`ARGS`[運行參數](/cht/cli.html#運行參數)，刮削**其他**影片則加`-o`
-* 如指定自訂配置，則`cloud_config_instance`填入自訂雲端配置實例名稱，`local_config_file`為在容器`/config/.mdc`對應宿主目錄下的設定檔名
+* 如指定自訂配置，則`cloud_config_instance`填入自訂雲端配置實例名稱，`local_config_file`為在容器`/config/.mdc`對應宿主資料夾下的設定檔名
 
 * DSM首個新建用戶的`UID`為1026，無需設定；Unraid請設定為99
 * 其他系統：連接系統SSH，連線方法自行搜索，連線後輸入`id`指令取得目前使用者 `UID` `GID`，填入環境變數`UID` `GID`
 
 * **不勾選**完成後執行此容器
 
-* 在容器頁面中，右鍵詳情，編輯卷，`/subs`字幕目錄可選
+* 在容器頁面中，右鍵詳情，編輯卷，`/subs`字幕資料夾可選
 
-* 左側為宿主機目錄（自行設定），右側為容器中的目錄（不可變）
-* 在宿主機中新資料夾，該目錄用於映射**容器內**目錄`/config/.mdc`
+* 左側為宿主機資料夾（自行設定），右側為容器中的資料夾（不可變）
+* 在宿主機中新資料夾，該資料夾用於映射**容器內**資料夾`/config/.mdc`
 
 * 儲存後運行
 
-* 第一次運行，會在`config`目錄下產生`mdc.ini`文件
-  閱讀[這裡](https://docs.mvdc.top/cht/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)依自身需求配置 ，如配置代理
+* 第一次運行，會在`config`資料夾下產生`mdc.ini`檔案
+  閱讀[這裡](https://docs.mvdc.top/cht/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)依自身需求配置，如配置代理
 
-* **請勿修改`[common]`下`folder`相關配置**，這是容器內的目錄配置，修改會導致`來源資料夾找不到`
+* **請勿修改`[common]`下`folder`相關配置**，這是容器內的資料夾配置，修改會導致`來源資料夾找不到`
 
 * 第二次運行後，查看日誌後如果正常，則可在運行結束後移除環境變數`cloud_username`和`cloud_password`
 
@@ -92,23 +92,54 @@
   ![](/images/docker/6.jpg)
 * 在容器頁面中，右鍵詳情，編輯卷
   ![](/images/docker/7.jpg)
-* 在宿主機中新資料夾，該目錄用於映射**容器內**目錄`/config/.mdc`（必選）
+* 在宿主機中新資料夾，該資料夾用於映射**容器內**資料夾`/config/.mdc`（必選）
   ![](/images/docker/8.jpg)
-* 
-* 預設情況下，雲端配置為以移動方式整理文件，如需使用連結方式整理文件，請在[用戶面板](https://user.mvdc.top)中修改儲存
-* 設定左側與右側的資料目錄為一致，且**刮削目錄與輸出目錄在同一目錄下**
 
-* 若使用硬鏈接，請確保刮削目錄與輸出目錄都處於**同一硬碟分區**下
+* 預設情況下，以**移動**方式整理檔案，以下方式二選一
 
-* 在下文產生的`mdc.ini`檔案中修改目錄配置
-* `mdc.ini`中把`source_folders`為刮削目錄，請勿移除`['`和`']`
-* `mdc.ini`中把`success_folder`為輸出目錄
-* `/subs`字幕目錄可選
+### 移動方式整理
+
+<details>
+
+* 新增宿主中含有影片的資料夾，映射為Docker中的`/data`
+* 預設輸出資料夾為上述資料夾中的`output`資料夾，如需要輸出到其他位置，可新增宿主中其他資料夾，對應為Docker的`/data/output`
+
+![](/images/docker/12.jpg)
+
+</details>
+
+### 連結方式整理檔案
+
+
+<details>
+
+* 在[使用者面板](https://user.mvdc.top)中修改`整理模式`為`連結`，點選最下方`更新配置`
+* 設定左側與右側的資料資料夾為一致，且**刮削資料夾與輸出資料夾在同一資料夾下**
+
+![](/images/docker/13.jpg)
+
+* 若使用硬鏈接，請確保刮削資料夾與輸出資料夾都處於**同一硬碟分區**下
+
+* 在下文產生的`mdc.ini`檔案中修改資料夾配置
+* `mdc.ini`中把`source_folders`為刮削資料夾，請勿移除`["`和`"]`
+* `mdc.ini`中把`success_folder`為輸出資料夾
+
+```sh
+source_folders = ["/video/Movies"]
+success_folder = /video/output
+```
+
+
+</details>
+
+---
+
+* `/subs`字幕資料夾可選
 
 * 儲存後運行
 
-* 第一次運行，會在`config`目錄下產生`mdc.ini`文件，如果發生意外退出錯誤請忽略
-* **請勿修改`[common]`下`folder`相關配置**，這是容器內的目錄配置，修改會導致`來源資料夾找不到`
+* 第一次運行，會在`config`資料夾下產生`mdc.ini`檔案，如果發生意外退出錯誤請忽略
+* **請勿修改`[common]`下`folder`相關配置**，這是容器內的資料夾配置，修改會導致`來源資料夾找不到`
 * 閱讀[這裡](https://docs.mvdc.top/cht/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)依自身需求配置
   ![](/images/docker/10.jpg)
 * 第二次運行後，查看日誌後如果正常，則可在運行結束後移除環境變數`cloud_username`和`cloud_password`
@@ -124,7 +155,7 @@
 
 
 ## 首次運行
-建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的目錄權限問題
+建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的資料夾權限問題
 
 ### 拉取Docker映像
 ```sh
@@ -132,26 +163,26 @@ docker pull mvdctop/mdc
 mkdir test output
 ```
 
-### 放置測試影片，也可以用真實影片文件
-該命令為建立空白測試文件
+### 放置測試影片，也可以用真實影片檔案
+該命令為建立空白測試檔案
 ```sh
 touch ./test/生化危機.2002.mp4
 ```
 
-### 第一次運行，在當前`config`目錄下注入預設設定文件
+### 第一次運行，在當前`config`資料夾下注入預設設定檔案
 ```sh
 docker run --rm --name mdc -it \
   -v ${PWD}/config:/config/.mdc \
   mvdctop/mdc
 ```
 
-此時，目前目錄下的config資料夾出現mdc.ini文件，可依自身需求，參考[設定檔](https://docs.mvdc.top/cht/cli.html)進行編輯，請勿修改mdc .ini中的**目錄配置**和**token**
+此時，目前資料夾下的config資料夾出現mdc.ini檔案，可依自身需求，參考[設定檔](https://docs.mvdc.top/cht/cli.html)進行編輯，請勿修改mdc .ini中的**資料夾配置**和**token**
 
 ### 運行容器
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/source:/source \
-  -v ${PWD}/output:/output \
+  -v ${PWD}/data:/data \
+  -v ${PWD}/output:/data/output \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
@@ -169,8 +200,8 @@ docker run --rm --name mdc -it \
 * 非首次運行，可以刪除`cloud_username`和`cloud_password`，登入憑證已寫入配置
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/source:/source \
-  -v ${PWD}/output:/output \  
+  -v ${PWD}/data:/data \
+  -v ${PWD}/output:/data/output \  
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \

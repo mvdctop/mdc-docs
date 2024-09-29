@@ -180,8 +180,8 @@ docker run --rm --name mdc -it \
 ### 运行容器
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/source:/source \
-  -v ${PWD}/output:/output \
+  -v ${PWD}/data:/data \
+  -v ${PWD}/output:/data/output \
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
@@ -199,8 +199,8 @@ docker run --rm --name mdc -it \
 * 非首次运行，可以删除`cloud_username`和`cloud_password`，登录凭据已被写入配置
 ```sh
 docker run --rm --name mdc -it \
-  -v ${PWD}/source:/source \
-  -v ${PWD}/output:/output \  
+  -v ${PWD}/data:/data \
+  -v ${PWD}/output:/data/output \  
   -v ${PWD}/config:/config/.mdc \
   -e UID=$(stat -c %u test) \
   -e GID=$(stat -c %g test) \
