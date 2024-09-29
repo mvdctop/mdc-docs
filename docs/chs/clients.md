@@ -104,6 +104,8 @@
 * 添加宿主中含有影片的目录，映射为Docker中的`/data`
 * 默认情况下输出目录为上述目录中的`output`目录，如需要输出到其他位置，可添加宿主中其他目录，映射为Docker的`/data/output`
 
+![](/images/docker/12.jpg)
+
 </details>
 
 ### 链接方式整理文件
@@ -114,14 +116,23 @@
 * 在[用户面板](https://user.mvdc.top)中修改`整理模式`为`链接`，点击最下方`更新配置`
 * 设置左侧与右侧的数据目录为一致，且**刮削目录与输出目录在同一目录下**
 
+![](/images/docker/13.jpg)
+
 * 若使用硬链接，请确保刮削目录与输出目录都处于**同一硬盘分区**下
 
 * 在下文生成的`mdc.ini`文件中修改目录配置
-* `mdc.ini`中把`source_folders`为刮削目录，请勿移除`['`和`']`
+* `mdc.ini`中把`source_folders`为刮削目录，请勿移除`["`和`"]`
 * `mdc.ini`中把`success_folder`为输出目录
+
+```sh
+source_folders = ["/video/Movies"]
+success_folder = /video/output
+```
 
 
 </details>
+
+---
 
 * `/subs`字幕目录可选
 
