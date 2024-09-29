@@ -83,7 +83,7 @@
   可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)，如果刮削或整理**其他**影片，则添加`-o`  
   如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`自定义本地配置文件
 
-* DSM首个新建用户的`UID`为1026，无需设置；Unraid请设置为99  
+* Unraid请设置`UID`为`99`  
   其他系统：连接系统SSH，连接方法自行搜索，连接后输入`id`命令获取当前用户 `UID` `GID`，填入环境变量`UID` `GID`
 
 ![](/images/docker/id.jpg)
