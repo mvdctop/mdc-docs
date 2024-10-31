@@ -47,6 +47,10 @@ export default {
             link: '/configuration.md',
           },
           {
+            text: 'Processing Result Push Configuration',
+            link: '/bot_configuration.md',
+          },
+          {
             text: 'Instructions related to cloud disk mounting and NAS',
             link: '/cloud_mount.md',
           },
@@ -115,6 +119,10 @@ export default {
             link: '/chs/configuration.md',
           },
           {
+            text: '处理结果推送配置',
+            link: '/chs/bot_configuration.md',
+          },
+          {
             text: '云盘挂载与NAS相关说明',
             link: '/chs/cloud_mount.md',
           },
@@ -181,6 +189,10 @@ export default {
           {
             text: '雲端配置',
             link: '/cht/configuration.md',
+          },
+          {
+            text: '處理結果推播設定',
+            link: '/cht/bot_configuration.md',
           },
           {
             text: '雲端碟掛載與NAS相關說明',
