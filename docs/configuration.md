@@ -21,6 +21,24 @@ Generate NFO files directly in the folder where the video is located, and downlo
 * 5.Scrape and rename in place
 Generate the NFO file directly in the folder where the video is located, download the two cover images, and rename the video file to `Video name.Year.Suffix name`
 
+
+## Organize mode
+The organize mode determines how the movie file is handled in order to move it to the target directory or create an association with the original file
+
+### Move
+In this mode, the movie file is moved from the original location to the target directory. This means that the original file will no longer remain in its initial directory, but will be managed in the new location
+
+### Soft link
+The soft link mode creates a shortcut to the original movie file in the target directory, and the file itself remains in the original location
+
+### Hard link
+**The file and the linked file must be in the same partition or file system**
+Hard links are file system-level links, and multiple hard links actually point to the same physical file data blocks
+
+### Create strm file
+This mode creates a `.strm` file in the target directory, which is a simple text file containing the path information of the original movie file
+
+
 ## Download Missing Images Only
 Applicable to `3.Update existing NFO and Images` in the main running mode. Only the missing images will be downloaded, and existing images won't be overwritten again.
 
