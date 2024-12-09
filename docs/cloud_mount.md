@@ -20,7 +20,7 @@ If you use local cloud disk mounting tools such as [CloudDrive](https://www.clou
 Please make sure that the mounted drive letter type is `Network disk` in the mounting tool, otherwise it may cause the program to run incorrectly
 The program is placed in the local disk to start
 
-### Cloud configuration adjustment suggestions
+## Cloud configuration adjustment suggestions
 * Common Configuration - Organize mode - Select `Create strm file`
 
 ## Local configuration adjustment suggestions
