@@ -82,7 +82,7 @@
 ![](/images/docker/4.jpg)
 * 根据阁下的[注册](https://docs.mvdc.top/chs/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7)的用户名和密码，且已经激活，填写`cloud_username`和`cloud_password`  
   可根据需要填写`ARGS`[运行参数](/chs/cli.html#运行参数)    
-  如果刮削或整理**其他**影片，则添加`-o`；如果要后台静默定时刮削，即[后台托管模式](/chs/cli.md)，则添加`-b`  
+  如果刮削或整理**其他**影片，则添加`-o`；要定时刮削（目录监控），即[后台托管模式](/chs/cli.md)，则添加`-b`  
   如自定义其他云配置实例，则`cloud_config_instance`填写自定义云配置实例名称，`local_config_file`自定义本地配置文件
 
 * Unraid请设置`UID`为`99`  
