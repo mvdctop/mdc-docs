@@ -2,10 +2,15 @@
 
 If you encounter any of the following issues or have any suggestions, please feel free to contact us through the following methods:
 
-- **Reset Password**
-- **Bug Reports**
-- **Payment Issues**
-- **Feedback and Suggestions**
+* Reset password
+Please use the registered email address to send, or send a screenshot of the payment and username
+
+* Retrieve username
+Please send a screenshot of the payment
+
+* BUG feedback
+* Payment anomaly
+* Comments and suggestions
 
 Please send email to: `support@mvdc.top`
 
