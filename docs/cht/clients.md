@@ -43,7 +43,7 @@
 
 ## NAS系统
 
-<details>
+::: details
 
 ### 簡要流程
 * 開啟`Container Manager`下載`mvdctop/mdc`映像
@@ -99,19 +99,19 @@
 
 ### 移動方式整理
 
-<details>
+::: details
 
 * 新增宿主中含有影片的資料夾，映射為Docker中的`/data`
 * 預設輸出資料夾為上述資料夾中的`output`資料夾，如需要輸出到其他位置，可新增宿主中其他資料夾，對應為Docker的`/data/output`
 
 ![](/images/docker/12.jpg)
 
-</details>
+:::
 
 ### 連結方式整理檔案
 
 
-<details>
+::: details
 
 * 在[使用者面板](https://user.mvdc.top)中修改`整理模式`為`連結`，點選最下方`更新配置`
 * 設定左側與右側的資料資料夾為一致，且**刮削資料夾與輸出資料夾在同一資料夾下**
@@ -130,7 +130,7 @@ success_folder = /video/output
 ```
 
 
-</details>
+:::
 
 ---
 
@@ -147,11 +147,11 @@ success_folder = /video/output
 
 ## 若發生意外退出錯誤請忽略
 
-</details>
+:::
 
 ## Linux Shell
 
-<details>
+::: details
 
 
 ## 首次運行
@@ -250,5 +250,5 @@ Starting...
 - Log file '/config/.mdc/logs/mdc_2023xxxxTxxxxxx.txt' saved
 ```
 
-</details>
+:::
 

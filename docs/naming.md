@@ -1,6 +1,6 @@
 # General Movie or Episode 
 
-<details>
+::: details
 
 ### Episode naming rules
 🟢 To scrape episodes, the file name must contain at least `x episodes/episodes/episodes`, `EPxx`  
@@ -26,7 +26,7 @@
 
 Please open the folded content below to view
 
-<details>
+::: details
 
 | Watermark type | Video file name |
 |------|-----------------|
@@ -46,15 +46,14 @@ Please open the folded content below to view
 | 8K | `8K.png` |
 | Original disk(ISO) | `ISO.png` |
 
-</details>
+:::
 
-</details>
 
 ---
 
 # Other Movie
 
-<details>
+::: details
 
 Used to scrape movies sold in Japan that are named after numbers, for example:
 > The following pictures are from the Internet and are for reference only. The copyright belongs to the copyright holder.
@@ -81,7 +80,7 @@ Used to scrape movies sold in Japan that are named after numbers, for example:
 
 Please open the folded content below to view
 
-<details>
+::: details
 
 | Watermark type | Video file name |
 |-------------|---------------------------------|
@@ -105,6 +104,4 @@ Create a new `watermarks` directory under the `.mdc` directory in the current us
 | VR | `VR.png` |
 | Infantry | `UNCENSORED.png` |
 
-</details>
-
-</details>
+:::
