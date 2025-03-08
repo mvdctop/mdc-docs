@@ -131,7 +131,7 @@ touch ./data/生化危机.2002.mp4
 
 ### 运行容器
 
-* shell
+#### shell
 ```sh
 docker run \
   --rm \
@@ -145,7 +145,8 @@ docker run \
   -e NAME=Docker-MDC-GUI-Lite \
   mvdctop/mdc-gui-lite
 ```
-* docker-compose
+#### docker-compose
+保存为 `docker-compose.yml` 于当前目录
 ```yml
 version: '3.8'
 
@@ -163,6 +164,13 @@ services:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
       - NAME=Docker-MDC-GUI-Lite
+```
+命令
+```sh
+mkdir -p config data data/output
+export USER_ID=$(id -u)
+export GROUP_ID=$(id -g)
+docker-compose up
 ```
 
 ### 浏览器进入5800端口
