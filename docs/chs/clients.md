@@ -111,7 +111,7 @@ http://192.168.1.2:5800
 
 :::
 
-## Linux Shell
+## 普通 Linux 发行版
 
 ::: details
 
@@ -130,6 +130,8 @@ touch ./data/生化危机.2002.mp4
 ```
 
 ### 运行容器
+
+* shell
 ```sh
 docker run \
   --rm \
@@ -142,6 +144,25 @@ docker run \
   -e GROUP_ID=$(id -g) \
   -e NAME=Docker-MDC-GUI-Lite \
   mvdctop/mdc-gui-lite
+```
+* docker-compose
+```yml
+version: '3.8'
+
+services:
+  mdc-gui-lite:
+    image: mvdctop/mdc-gui-lite
+    container_name: Docker-MDC-GUI-Lite
+    ports:
+      - "5800:5800"
+    volumes:
+      - ./data:/data
+      - ./output:/data/output
+      - ./config:/config/.mdc
+    environment:
+      - USER_ID=${USER_ID}
+      - GROUP_ID=${GROUP_ID}
+      - NAME=Docker-MDC-GUI-Lite
 ```
 
 ### 浏览器进入5800端口
