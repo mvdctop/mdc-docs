@@ -8,8 +8,8 @@ Before registering an account and using this software, please read this End User
 
 ## Article 1: Definition and responsibilities of both parties
 ### 1.1 Definition
-* Software: refers to any platform software of "Movie Data Capture", website and all documentation related thereto.
-* Developer, operator, us: refers to the owner of the "Movie Data Capture" software and website.
+* Software: refers to any platform software of "Movie Data Crawler", website and all documentation related thereto.
+* Operator: Yohane Network Technology Limited.
 * User, you: refers to the individual who accepts the terms of this agreement and uses the software.
 * Metadata: refers to movie-related information obtained from the Internet.
 * Subscription: refers to the payment system for obtaining the right to use software.
@@ -100,7 +100,7 @@ This software is sold and licensed using a subscription model. You need to pay t
 * **Security Guarantee**: We will regularly update the software to provide the latest security guarantees to ensure that your data and privacy are protected.
 * **Satisfaction Guarantee**: We are committed to providing the best experience.
 
-Additionally, we encourage you to contact us if you have **special needs or require personalized support**. We provide one-on-one remote support and services to ensure that your special needs are met and to provide you with the best user experience. Please note that as these services may require additional resources and expertise, there will be **additional fees** involved. We will provide you with the highest level of support and satisfaction!
+Additionally, we encourage you to contact Operator if you have **special needs or require personalized support**. We provide one-on-one remote support and services to ensure that your special needs are met and to provide you with the best user experience. Please note that as these services may require additional resources and expertise, there will be **additional fees** involved. We will provide you with the highest level of support and satisfaction!
 
 ### 5.2 Pricing and Price Changes
 The Operator reserves the right to change the price of software subscriptions at any time. Any price changes will only apply to new subscription periods.

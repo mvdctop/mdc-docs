@@ -6,249 +6,183 @@
 * 如果沒有，請在`終端`執行 `sudo spctl --master-disable` 密碼為使用者登陸密碼
 * 在`終端`執行 `sudo spctl --master-disable` 密碼為使用者登陸密碼
 
-# Docker （實驗性）
-* 注意，因為Docker檔案系統的特殊性，請仔細閱讀以下操作指南後再行使用，開發者對使用者**因未仔細閱讀檔案**造成使用不當導致的檔案遺失、損壞均不負責
-* **無需設置任何網絡端口**
+# Docker
 
-## 强烈建議在首次使用Docker版本之前，先使用Windows或macOS版本
+::: warning
+強烈建議在首次使用Docker版本前，先使用Windows或macOS版本
 
-## 與其他客戶端一些不同之處
-*失敗處理記錄檔`failed_list.txt`，存放於容器資料夾`/config`中
-* 目前Docker版本只支援兩種影片模式各**一個**刮削資料夾
+出現任何影響使用的BUG請使用桌面版，並參考[此處](/chs/cloud_mount.html)使用
+:::
 
-## 環境變數
+[Docker Hub 頁面](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
 
-本鏡像增加了權限設定功能，你可以透過使用 UID (使用者id) GID (群組id) 兩個環境變數來設定程式執行後所有檔案的權限。
+## 遷移到新版本
 
-| 欄位名稱 | 值語意 | 預設值 |
-|:------|:-----|:-------|
-| UID | uid | 1026 |
-| GID | gid | 100 |
-| UMASK | source, output資料夾的umask | 002 |
-| NAME | 網頁端顯示的裝置名稱 | MDC-Docker |
-| ARGS | [運行參數](/cht/cli.html# 運行參數) | 無 |
-| cloud_username | 網頁端的使用者名稱 | 無 |
-| cloud_password | 網頁端的密碼 | 無 |
-| cloud_config_instance | 雲端設定實例名稱 | Default |
-| local_config_file | 本機設定檔 | mdc.ini |
+::: tip
+舊版 ~~mvdctop/mdc~~ **停止更新**
+請拉取 mvdctop/mdc-gui-lite
 
-## 卷
-| Docker卷      | 解釋     |
-|:-------------|:-------|
-| 自訂           | 媒體數據資料夾 |
-| /subs        | 影片字幕資料夾 |
-| /config/.mdc | 設定檔資料夾  |
-
-#### 以下教程二选一
-
-## NAS系统
+該條目將指導閣下
+由 ~~mvdctop/mdc~~ 遷移至 mvdctop/mdc-gui-lite
+請點擊下方 **詳細** 閱讀
+:::
 
 ::: details
 
-### 簡要流程
-* 開啟`Container Manager`下載`mvdctop/mdc`映像
+---
 
-* 建立容器，設定環境變數
+### 新特性
+可存取瀏覽器使用者介面，容器預設HTTP連接埠`5800`，與其他用戶端有一致的體驗
 
-* 依閣下的[註冊](https://docs.mvdc.top/cht/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7% 9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F% B7)的使用者名稱和密碼，且已被激活，填入`cloud_username`和`cloud_password`
-* 可依需要填入`ARGS`[運行參數](/cht/cli.html#運行參數)，刮削**其他**影片則加`-o`
-* 如指定自訂配置，則`cloud_config_instance`填入自訂雲端配置實例名稱，`local_config_file`為在容器`/config/.mdc`對應宿主資料夾下的設定檔名
+### 環境變數
+* `UID`更改為`USER_ID`
+* `GID`更改為`GROUP_ID`
+* DSM請點選 `-` 移除環境變數空值
+  ![](/images/docker/11.jpg)
 
-* DSM首個新建用戶的`UID`為1026，無需設定；Unraid請設定為99
-* 其他系統：連接系統SSH，連線方法自行搜索，連線後輸入`id`指令取得目前使用者 `UID` `GID`，填入環境變數`UID` `GID`
+### 連接埠
+映射容器HTTP連接埠`5800`
 
-* **不勾選**完成後執行此容器
+### 設定文件
+移除舊版設定檔`mdc.ini`，使用新版重新產生的設定文件
 
-* 在容器頁面中，右鍵詳情，編輯卷，`/subs`字幕資料夾可選
+### 運行
+瀏覽器訪問容器5800端口
 
-* 左側為宿主機資料夾（自行設定），右側為容器中的資料夾（不可變）
-* 在宿主機中新資料夾，該資料夾用於映射**容器內**資料夾`/config/.mdc`
+**任何BUG請立即[聯絡我們](https://docs.mvdc.top/chs/contact.html)回饋**
 
-* 儲存後運行
-
-* 第一次運行，會在`config`資料夾下產生`mdc.ini`檔案
-  閱讀[這裡](https://docs.mvdc.top/cht/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)依自身需求配置，如配置代理
-
-* **請勿修改`[common]`下`folder`相關配置**，這是容器內的資料夾配置，修改會導致`來源資料夾找不到`
-
-* 第二次運行後，查看日誌後如果正常，則可在運行結束後移除環境變數`cloud_username`和`cloud_password`
-
-### 圖文流程
-* 開啟`Container Manager`下載`mvdctop/mdc`映像
-  ![](/images/docker/1.jpg)
-  ![](/images/docker/2.jpg)
-  ![](/images/docker/3.jpg)
-  ![](/images/docker/4.jpg)
-* 依閣下的[註冊](https://docs.mvdc.top/cht/#_1-%E5%9C%A8%E7%BD%91%E9%A1%B5%E7%AB%AF%E7% 9A%84%E7%94%A8%E6%88%B7%E9%9D%A2%E6%9D%BF%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F% B7)的使用者名稱和密碼，且已被激活，填入`cloud_username`和`cloud_password`  
-  可依需要填寫`ARGS`[運行參數](/cht/cli.html#運行參數)，如果刮削或整理**其他**影片，則添加`-o`  
-  如自訂其他雲端設定實例，則`cloud_config_instance`填寫自訂雲端設定實例名稱，`local_config_file`自訂本機設定檔
-
-* DSM首個新建用戶的`UID`為1026，無需設定；Unraid請設定為99  
-  其他系統：連接系統SSH，連線方法自行搜索，連線後輸入`id`指令取得目前使用者 `UID` `GID`，填入環境變數`UID` `GID`
-
-![](/images/docker/id.jpg)
-![](/images/docker/5.jpg)
-* **不勾選**完成後執行此容器
-  ![](/images/docker/6.jpg)
-* 在容器頁面中，右鍵詳情，編輯卷
-  ![](/images/docker/7.jpg)
-* 在宿主機中新資料夾，該資料夾用於映射**容器內**資料夾`/config/.mdc`（必選）
-  ![](/images/docker/8.jpg)
-
-* 預設情況下，以**移動**方式整理檔案，以下方式二選一
-
-### 移動方式整理
-
-::: details
-
-* 新增宿主中含有影片的資料夾，映射為Docker中的`/data`
-* 預設輸出資料夾為上述資料夾中的`output`資料夾，如需要輸出到其他位置，可新增宿主中其他資料夾，對應為Docker的`/data/output`
-
-![](/images/docker/12.jpg)
+---
 
 :::
 
-### 連結方式整理檔案
 
+## 環境變數
+| 欄位名稱 | 值語意 | 預設值 |
+|:---------|:-----------|:--------------------|
+| USER_ID | 宿主機目前使用者ID | 1026 |
+| GROUP_ID | 宿主機目前使用者群組ID | 100 |
+| UMASK | 資料目錄的權限遮罩 | 002 |
+| NAME | 網頁端顯示的裝置名稱 | Docker-MDC-GUI-Lite |
 
-::: details
+## 卷
+| 卷 | 解釋 |
+|:-------------|:-------|
+| /data | 媒體資料目錄 |
+| /subs | 影片字幕目錄 |
+| /config/.mdc | 設定檔目錄 |
 
-* 在[使用者面板](https://user.mvdc.top)中修改`整理模式`為`連結`，點選最下方`更新配置`
-* 設定左側與右側的資料資料夾為一致，且**刮削資料夾與輸出資料夾在同一資料夾下**
+::: warning
+不建議在Docker容器內軟/硬連結文件
 
-![](/images/docker/13.jpg)
-
-* 若使用硬鏈接，請確保刮削資料夾與輸出資料夾都處於**同一硬碟分區**下
-
-* 在下文產生的`mdc.ini`檔案中修改資料夾配置
-* `mdc.ini`中把`source_folders`為刮削資料夾，請勿移除`["`和`"]`
-* `mdc.ini`中把`success_folder`為輸出資料夾
-
-```sh
-source_folders = ["/video/Movies"]
-success_folder = /video/output
-```
-
-
+如果一定要使用連結文件，請確保在設定卷時
+**宿主目錄與容器目錄完全一致**
 :::
 
 ---
 
-* `/subs`字幕資料夾可選
+以下教學二選一
 
-* 儲存後運行
-
-* 第一次運行，會在`config`資料夾下產生`mdc.ini`檔案，如果發生意外退出錯誤請忽略
-* **請勿修改`[common]`下`folder`相關配置**，這是容器內的資料夾配置，修改會導致`來源資料夾找不到`
-* 閱讀[這裡](https://docs.mvdc.top/cht/cli.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)依自身需求配置
-  ![](/images/docker/10.jpg)
-* 第二次運行後，查看日誌後如果正常，則可在運行結束後移除環境變數`cloud_username`和`cloud_password`
-  ![](/images/docker/11.jpg)
-
-## 若發生意外退出錯誤請忽略
-
-:::
-
-## Linux Shell
+## NAS系統
 
 ::: details
 
+* 開啟`Container Manager`取得`mvdctop/mdc-gui-lite`映像
 
-## 首次運行
-建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的資料夾權限問題
-
-### 拉取Docker映像
-```sh
-docker pull mvdctop/mdc
-mkdir test output
-```
-
-### 放置測試影片，也可以用真實影片檔案
-該命令為建立空白測試檔案
-```sh
-touch ./test/生化危機.2002.mp4
-```
-
-### 第一次運行，在當前`config`資料夾下注入預設設定檔案
-```sh
-docker run --rm --name mdc -it \
-  -v ${PWD}/config:/config/.mdc \
-  mvdctop/mdc
-```
-
-此時，目前資料夾下的config資料夾出現mdc.ini檔案，可依自身需求，參考[設定檔](https://docs.mvdc.top/cht/cli.html)進行編輯，請勿修改mdc .ini中的**資料夾配置**和**token**
-
-### 運行容器
-```sh
-docker run --rm --name mdc -it \
-  -v ${PWD}/data:/data \
-  -v ${PWD}/output:/data/output \
-  -v ${PWD}/config:/config/.mdc \
-  -e UID=$(stat -c %u test) \
-  -e GID=$(stat -c %g test) \
-  -e ARGS="" \
-  -e NAME=MDC-Docker \
-  -e cloud_username=USERNAME \
-  -e cloud_password=PASSWORD \
-  -e cloud_config_instance="Default" \
-  -e local_config_file="mdc.ini" \
-  mvdctop/mdc
-```
+### 連接埠
+* 映射埠5800
+  ![](/images/docker/4.jpg)
+* 5900為VNC訪問端口，可點擊右側`-`移除
+  ![](/images/docker/11.jpg)
 
 
-## 後續運行
-* 非首次運行，可以刪除`cloud_username`和`cloud_password`，登入憑證已寫入配置
-```sh
-docker run --rm --name mdc -it \
-  -v ${PWD}/data:/data \
-  -v ${PWD}/output:/data/output \  
-  -v ${PWD}/config:/config/.mdc \
-  -e UID=$(stat -c %u test) \
-  -e GID=$(stat -c %g test) \
-  -e ARGS="" \
-  mvdctop/mdc
-```
+### 環境變數
+![](/images/docker/5.jpg)
 
-* 如顯示被踢出，則需再次輸入`cloud_username`和`cloud_password`環境變量
-* 如需要改名，則需要刪除容器再次進行上一步的拉取，進行首次運行操作
+* 普通 Linux 發行版預設使用者`USER_ID`與`GROUP_ID`皆為`1000`
+* Synology DSM 預設使用者`USER_ID`為`1026` `GROUP_ID`為`100`
 
-然後你會看到以下輸出，如果輸出如下證明工作正常
+![](/images/docker/id.jpg)
 
-```sh
----Setup Timezone to Asia/Shanghai---
----Checking if UID: 1000 matches user---
----Checking if GID: 1000 matches user---
-usermod: no changes
----Setting umask to 002---
----Taking ownership of data...---
-Checking if config file exist
-Starting...
----------------------------------------------------------
-                      Login Success
----------------------------------------------------------
-                 Expire Date: 2XXX-01-01
----------------------------------------------------------
-[*]================= Movie Data Capture =================
-[*]                        7.0.3
-[*]======================================================
-[*] - Linux-6.2.0-1016-kvm-x86_64-with-glibc2.37
-[*] - x86_64 - Python-3.11.4
-[*]======================================================
-[*] Current Cloud Config Instance: Default
-[*]======================================================
-[+] Start at 2023-XX-XX XX:XX:XX
-[+] Main Working mode - 1 - Scraping
-[+] Find  1  movies
-[*]======================================================
-[!]                - 100.% [1/1] -             XX:XX:XX
-[!] [生化危機] As Name Processing for '生化危機.2002.mp4'
-[+]Image Downloaded! thumb.jpg
-[+]Image Downloaded! backdrop.jpg
-[*]======================================================
-[+]Running time 0:00:08.148  End at 2023-XX-XX XX:XX:XX
-[+]All finished!!!
-- Log file '/config/.mdc/logs/mdc_2023xxxxTxxxxxx.txt' saved
-```
+* 點選 `-` 移除環境變數空值
+  ![](/images/docker/11.jpg)
+
+### 卷
+* 在宿主機中新資料夾，該目錄用於映射**容器內**目錄`/config/.mdc`（必選）
+  ![](/images/docker/8.jpg)
+
+* 在容器頁面中，右鍵詳情，編輯卷
+  ![](/images/docker/12.jpg)
+
+* `/subs`字幕目錄可選
+
+### 完成運行，瀏覽器進入5800埠
+http://192.168.1.2:5800
 
 :::
 
+## 普通 Linux 發行版
+
+::: details
+
+建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的目錄權限問題
+
+### 拉取Docker映像
+```sh
+docker pull mvdctop/mdc-gui-lite
+mkdir -p config data data/output
+```
+
+### 放置測試影片，也可以用真實影片文件
+該命令為建立空白測試文件
+```sh
+touch ./data/生化危機.2002.mp4
+```
+
+### 運行容器
+
+#### shell
+```sh
+docker run \
+  --rm \
+  --name mdc-gui-lite \
+  -p 5800:5800 \
+  -v ${PWD}/data:/data \
+  -v ${PWD}/output:/data/output \
+  -v ${PWD}/config:/config/.mdc \
+  -e USER_ID=$(id -u) \
+  -e GROUP_ID=$(id -g) \
+  -e NAME=Docker-MDC-GUI-Lite \
+  mvdctop/mdc-gui-lite
+```
+#### docker-compose
+儲存為 `docker-compose.yml` 於目前目錄
+```yml
+version: '3.8'
+
+services:
+  mdc-gui-lite:
+    image: mvdctop/mdc-gui-lite
+    container_name: Docker-MDC-GUI-Lite
+    ports:
+      - "5800:5800"
+    volumes:
+      - ./data:/data
+      - ./output:/data/output
+      - ./config:/config/.mdc
+    environment:
+      - USER_ID=${USER_ID}
+      - GROUP_ID=${GROUP_ID}
+      - NAME=Docker-MDC-GUI-Lite
+```
+命令
+```sh
+mkdir -p config data data/output
+export USER_ID=$(id -u)
+export GROUP_ID=$(id -g)
+docker-compose up
+```
+
+### 瀏覽器進入5800埠
+http://192.168.1.2:5800
+
+:::

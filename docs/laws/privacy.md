@@ -9,7 +9,7 @@ Please read this privacy policy carefully before registering an account and usin
 
 ## Article 1: Introduction
 
-Welcome to the "Movie Data Capture" website and application (the "Service"). We take your privacy very seriously and are committed to protecting your personal information. This privacy policy is designed to help you understand how we collect, use, store and protect your personal information. Please read the following carefully to understand our privacy practices.
+Welcome to the "Movie Data Crawler" website and application (the "Service"). We take your privacy very seriously and are committed to protecting your personal information. This privacy policy is designed to help you understand how we collect, use, store and protect your personal information. Please read the following carefully to understand our privacy practices.
 
 ## Article 2: Information collected
 
