@@ -84,6 +84,15 @@ Exclude this folder when scanning. If there are multiple folders, use `,`, for e
 | `series` | Series                              |
 | `prefix`         | mumber prefix                       |
 
+| Resolution Variable   |  |  |  |  |  |  |  |  |
+|---------------|-------|-------|-------|-------|------|------|------|------|
+| `resolution`  | 4320p | 2160p | 1440p | 1080p | 720p | 480p | 360p | 144p |
+| `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
+| `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
+| `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+The program first gets the resolution from the file name.
+If you want to capitalize the **Resolution Variable**, just fill it in capital letters, `RESOLUTION` `RESOLUTION2`
+
 The above parameters are called **variables** below.
 
 ## Custom rule method
@@ -93,6 +102,9 @@ Do not use characters such as `%` `$` `&`
 * `actor/[number]-title`
 * `actor/number`
 * `#actor/number`
+* `title-resolution`
+* `title-resolution2`
+* `title-RESOLUTION2`
 
 ## Folder location Rule
 After the media file is processed, it will be output to the path set by this setting.

@@ -67,32 +67,42 @@
 扫描时排除该文件夹，若多个文件夹使用`,`，示例`aa,bb,cc`
 
 # 命名规则设置
-| 变量               | 解释          |
-|------------------|-------------|
-| `title`          | 片名          |
+| 变量               | 解释         |
+|------------------|------------|
+| `title`          | 片名         |
 | `original_title` | 原生片名（未翻译片名） |
-| `actor`          | 演员          |
-| `studio`         | 公司          |
-| `director`       | 导演          |
-| `release`        | 发售日         |
-| `year`           | 发行年份        |
-| `number`         | 影片号码        |
-| `cover`          | 封面链接        |
-| `tag`            | 类型          |
-| `outline`        | 简介          |
-| `runtime`        | 时长          |
-| `series`         | 系列          |
-| `prefix`         | 号码前缀        |
+| `actor`          | 演员         |
+| `studio`         | 公司         |
+| `director`       | 导演         |
+| `release`        | 发售日        |
+| `year`           | 发行年份       |
+| `number`         | 影片号码       |
+| `cover`          | 封面链接       |
+| `tag`            | 类型         |
+| `outline`        | 简介         |
+| `runtime`        | 时长         |
+| `series`         | 系列         |
+| `prefix`         | 号码前缀       |
 
-上面的参数以下都称之为**变量**
+| 分辨率变量      |  |  |  |  |  |  |  |  |
+|------------|-------|-------|-------|-------|------|------|------|------|
+| `resolution` | 4320p | 2160p | 1440p | 1080p | 720p | 480p | 360p | 144p |
+| `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
+| `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
+| `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+程序先从文件名获取分辨率
+若要**分辨率变量**大写，大写填写即可，`RESOLUTION` `RESOLUTION2`
 
 ## 自定义规则方法
-请勿使用`%` `$` `&`等字符  
+请勿使用`%` `$` `&`等在文件路径中的非法字符  
 
 * `genres/title`
 * `actor/[number]-title`
 * `actor/number`
 * `#actor/number`
+* `title-resolution`
+* `title-resolution2`
+* `title-RESOLUTION2`
 
 ## 文件夹路径规则
 媒体文件处理完成后，输出到此设置的路径中

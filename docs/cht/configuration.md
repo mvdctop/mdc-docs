@@ -83,6 +83,15 @@
 | `series`         | 系列            |
 | `prefix`         | 號碼前綴          |
 
+| 解析度變數          |  |  |  |  |  |  |  |  |
+|---------------|-------|-------|-------|-------|------|------|------|------|
+| `resolution`  | 4320p | 2160p | 1440p | 1080p | 720p | 480p | 360p | 144p |
+| `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
+| `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
+| `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+程式先從檔案名中獲取解析度
+若要**解析度變數**大寫，大寫填寫即可，`RESOLUTION` `RESOLUTION2`
+
 上面的參數以下都稱為**變數**
 
 ## 自訂規則方法
@@ -92,6 +101,9 @@
 * `actor/[number]-title`
 * `actor/number`
 * `#actor/number`
+* `title-resolution`
+* `title-resolution2`
+* `title-RESOLUTION2`
 
 ## 資料夾路徑規則
 媒體檔案處理完成後，輸出到此設定的路徑中
