@@ -90,6 +90,7 @@ Exclude this folder when scanning. If there are multiple folders, use `,`, for e
 | `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
 | `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
 | `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+
 The program first gets the resolution from the file name.
 If you want to capitalize the **Resolution Variable**, just fill it in capital letters, `RESOLUTION` `RESOLUTION2`
 

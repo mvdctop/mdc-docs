@@ -90,6 +90,7 @@
 | `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
 | `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
 | `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+
 程序先从文件名获取分辨率
 若要**分辨率变量**大写，大写填写即可，`RESOLUTION` `RESOLUTION2`
 

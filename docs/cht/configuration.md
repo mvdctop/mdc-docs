@@ -89,6 +89,7 @@
 | `resolution2` | 8k    | 4k    | 2k    | 1080p | 720p | 480p | 360p | 144p |
 | `resolution3` | 8k    | 4k    | 2k    | fhd   | hd   | sd   | sd   | sd   |
 | `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
+
 程式先從檔案名中獲取解析度
 若要**解析度變數**大寫，大寫填寫即可，`RESOLUTION` `RESOLUTION2`
 
