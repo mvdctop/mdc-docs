@@ -35,6 +35,17 @@ Please click `Stop` when a BUG occurs, check `Debug Mode` and click `Run` again,
 * The supported video information URLs are general websites in cloud configuration and video type websites in naming rules.
 * During operation, if a video with a custom URL is processed, the custom URL will be used
 
+## Actors Photo (Avatar)
+
+::: tip
+Only support Emby Jellyfin
+:::
+
+* Enter the server address
+* Enter the API key, click to enter the `Enter the Key Creation Page`, create a new API key, and copy it to the input box
+* Click `Save and test`
+* Click `Start completing Images`
+
 ## Custom field mapping table
 * After the program is run for the first time, the `mapping_tables` directory will be generated in the `.mdc` directory in the system user directory, containing two xml files, which can be used in conjunction with the `field conversion settings` in the cloud configuration.
 * Actor mapping table: `mapping_actor.xml`, other field mapping tables: `mapping_info.xml`
