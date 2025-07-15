@@ -126,6 +126,18 @@
 ## 号码提取排除字符
 号码提取时，排除干扰提取号码的字符，用`,`分割，示例`xxx.com@,bbb.net,ccc.top`
 
+# OpenAI配置
+::: tip
+已测试可用的OpenAI API  
+* [SiliconFlow](https://account.siliconflow.com/zh/login) - Base URL `https://api.ap.siliconflow.com/v1` - [API Key](https://cloud.siliconflow.com/account/ak) - Model `deepseek-ai/DeepSeek-V3`
+:::
+
+* 在上述已测试可用网站注册账号
+* 进入网页端[云配置](https://user.mvdc.top/configuration/other)
+* 于OpenAI配置，填写`Base URL` `API Key` `Model模型` 
+* 翻译引擎选择`OpenAI`
+
+
 # 水印配置
 ## 水印风格
 * 参考水印文字语言为英文
