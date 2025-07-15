@@ -127,6 +127,20 @@
 ## 號碼提取排除字符
 號碼提取時，排除乾擾提取號碼的字符，用`,`分割，示例`xxx.com@,bbb.net,ccc.top`
 
+# OpenAI配置
+::: tip
+已測試可用的OpenAI API
+### [SiliconFlow](https://account.siliconflow.com/zh/login)
+* Base URL `https://api.ap.siliconflow.com/v1`
+* Model `deepseek-ai/DeepSeek-V3`
+* [API Key](https://cloud.siliconflow.com/account/ak)  
+:::
+
+* 在上述已測試網站注冊賬號
+* 進入[雲端配置](https://user.mvdc.top/configuration/other)
+* 于OpenAI配置，填寫`Base URL` `API Key` `Model模型`
+* 翻譯引擎選擇`OpenAI`
+
 # 水印配置
 ## 水印風格
 * 參考水印文字語言為英文

@@ -129,11 +129,14 @@
 # OpenAI配置
 ::: tip
 已测试可用的OpenAI API  
-* [SiliconFlow](https://account.siliconflow.com/zh/login) - Base URL `https://api.ap.siliconflow.com/v1` - [API Key](https://cloud.siliconflow.com/account/ak) - Model `deepseek-ai/DeepSeek-V3`
+### [SiliconFlow](https://account.siliconflow.com/zh/login)  
+* Base URL `https://api.ap.siliconflow.com/v1`
+* Model `deepseek-ai/DeepSeek-V3`  
+* [API Key](https://cloud.siliconflow.com/account/ak)  
 :::
 
 * 在上述已测试可用网站注册账号
-* 进入网页端[云配置](https://user.mvdc.top/configuration/other)
+* 进入[云配置](https://user.mvdc.top/configuration/other)
 * 于OpenAI配置，填写`Base URL` `API Key` `Model模型` 
 * 翻译引擎选择`OpenAI`
 

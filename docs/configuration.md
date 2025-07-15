@@ -128,6 +128,20 @@ Delete the specified characters in the title. If you enter `\()`, the `\()` char
 ## Exclude characters for number extraction
 When extracting the number, eliminate characters that interfere with the extracted number and separate them with `,`, for example `xxx.com@,bbb.net,ccc.top`
 
+# OpenAI Configuration
+::: tip
+Tested OpenAI API
+### [SiliconFlow](https://account.siliconflow.com/zh/login)
+* Base URL `https://api.ap.siliconflow.com/v1`
+* Model `deepseek-ai/DeepSeek-V3`
+* [API Key](https://cloud.siliconflow.com/account/ak)  
+:::
+
+* Register an account on the Above tested website
+* Enter [Cloud Configuration](https://user.mvdc.top/configuration/other)
+* In OpenAI configuration, fill `Base URL` `API Key` `Model`
+* Translation engine selection `OpenAI`
+
 # Watermark Configuration
 ## Watermark Type
 * The reference watermark text language is English
