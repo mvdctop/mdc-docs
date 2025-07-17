@@ -10,6 +10,7 @@
 * **Cloud Configuration Management**: Used to manage configuration settings for cloud scraping
 * **Device Management**: Used to view devices used to manage login accounts
 ### Native client
+✅ OpenAI large model translation access support  
 ✅ Supports Windows, Linux, Docker, MacOS X86 & ARM  
 ✅ **Cloud configuration synchronization**: The client can synchronize the cloud configuration on the web page, and organize and scrape local movies based on the cloud configuration.  
 ✅ **Metadata acquisition and cover download**: According to the cloud configuration, metadata scraping and cover download of local videos are performed  
