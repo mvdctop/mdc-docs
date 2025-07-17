@@ -1,6 +1,13 @@
-import { defaultTheme } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default';
+import { defineUserConfig } from 'vuepress';
+import { webpackBundler } from '@vuepress/bundler-webpack';
 
-export default {
+export default defineUserConfig({
+  bundler: webpackBundler({
+    // 可选的 webpack 打包配置
+    // 例如：配置 source map
+    devtool: 'source-map',
+  }),
   theme: defaultTheme({
     contributors: false,
     locales: {
@@ -226,18 +233,17 @@ export default {
     '/': {
       lang: 'en-US',
       title: 'MDC Documents',
-      description: 'MDC Documents'
+      description: 'MDC Documents',
     },
     '/chs/': {
       lang: 'zh-CN',
       title: 'MDC文档',
-      description: 'MDC文档'
+      description: 'MDC文档',
     },
     '/cht/': {
       lang: 'zh-TW',
       title: 'MDC文档',
-      description: 'MDC文档'
+      description: 'MDC文档',
     },
   },
-}
-
+});

@@ -1,4 +1,4 @@
-import { defaultTheme } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default';
 
 export default {
     theme: defaultTheme({
