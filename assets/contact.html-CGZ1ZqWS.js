@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-56cd1712","path":"/cht/contact.html","title":"","lang":"zh-TW","frontmatter":{},"headers":[{"level":2,"title":"聯繫我們","slug":"聯繫我們","link":"#聯繫我們","children":[]}],"git":{"updatedTime":1752790700000},"filePathRelative":"cht/contact.md"}');export{t as data};

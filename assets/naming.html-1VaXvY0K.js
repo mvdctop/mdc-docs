@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-c6bbcd52","path":"/chs/naming.html","title":"一般影片或剧集","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1752790700000},"filePathRelative":"chs/naming.md"}');export{t as data};

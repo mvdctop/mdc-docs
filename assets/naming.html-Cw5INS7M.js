@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-32964690","path":"/naming.html","title":"General Movie or Episode","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1752790700000},"filePathRelative":"naming.md"}');export{e as data};

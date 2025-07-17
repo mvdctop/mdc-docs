@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-e9b5c050","path":"/cht/naming.html","title":"一般影片或劇集","lang":"zh-TW","frontmatter":{},"headers":[{"level":2,"title":"其他電影","slug":"其他電影","link":"#其他電影","children":[]}],"git":{"updatedTime":1752790700000},"filePathRelative":"cht/naming.md"}');export{t as data};
