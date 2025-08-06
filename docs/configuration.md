@@ -67,25 +67,26 @@ For the application tutorial, you can search on Google for `TMDB API KEY applica
 Exclude this folder when scanning. If there are multiple folders, use `,`, for example `aa,bb,cc`
 
 # Naming rule settings
-| Variable | Explanation                        |
-|----|------------------------------------|
-| `title` | film title                         |
+| Variable         | Explanation                         |
+|------------------|-------------------------------------|
+| `title`          | film title                          |
 | `original_title` | Original title (untranslated title) |
-| `actor` | actor                              |
-| `studio` | company                            |
-| `director` | director                           |
-| `release` | Release date                       |
-| `year` | Year of release                    |
-| `number` | Video number                       |
-| `cover` | cover link                         |
-| `tag` | type                               |
-| `outline` | Introduction                       |
-| `runtime` | runtime                            |
-| `series` | Series                             |
-| `prefix`         | Number prefix                      |
-| `letter`         | Number initial                     |
-| `season`         | Season of TV series                               |
-| `episode`        | Episode of TV series                              |
+| `actor`          | actor                               |
+| `studio`         | company                             |
+| `director`       | director                            |
+| `release`        | Release date                        |
+| `year`           | Year of release                     |
+| `number`         | Video number                        |
+| `cover`          | cover link                          |
+| `tag`            | type                                |
+| `outline`        | Introduction                        |
+| `runtime`        | runtime                             |
+| `series`         | Series                              |
+| `prefix`         | Number prefix                       |
+| `letter`         | Number initial                      |
+| `season`         | Season of TV series                 |
+| `episode`        | Episode of TV series                |
+| `suffix`         | File Extension                      |
 
 | Resolution Variable   |  |  |  |  |  |  |  |  |
 |---------------|-------|-------|-------|-------|------|------|------|------|
@@ -95,7 +96,9 @@ Exclude this folder when scanning. If there are multiple folders, use `,`, for e
 | `resolution4` | uhd   | uhd   | qhd   | fhd   | hd   | sd   | sd   | sd   |
 
 The program first gets the resolution from the file name.
-If you want to capitalize the **Resolution Variable**, just fill it in capital letters, `RESOLUTION` `RESOLUTION2`
+
+* If you want to capitalize the **Resolution Variable**, just fill it in capital letters, `RESOLUTION` `RESOLUTION2`
+* If you want to capitalize the **File Extension Variable**, just fill it in capital letters, `SUFFIX`
 
 The above parameters are called **variables** below.
 
