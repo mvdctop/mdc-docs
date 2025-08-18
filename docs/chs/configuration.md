@@ -131,10 +131,16 @@
 # OpenAI配置
 ::: tip
 已测试可用的OpenAI API  
-### [SiliconFlow](https://account.siliconflow.com/zh/login)  
+### [SiliconFlow 国际站](https://account.siliconflow.com/zh/login)  
 * Base URL `https://api.ap.siliconflow.com/v1`
 * Model `deepseek-ai/DeepSeek-V3`  
 * [API Key](https://cloud.siliconflow.com/account/ak)  
+
+### [SiliconFlow 中国站](https://account.siliconflow.cn/zh/login)
+* Base URL `https://api.ap.siliconflow.cn/v1`
+* Model `deepseek-ai/DeepSeek-V3`
+* [API Key](https://cloud.siliconflow.cn/account/ak)
+
 :::
 
 * 在上述已测试可用网站注册账号

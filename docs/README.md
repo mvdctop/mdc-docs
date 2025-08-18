@@ -60,9 +60,9 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 * Please perform name extraction to check whether it meets expectations before processing the video
 * If you find that the extracted name does not match the expected video, please rename it manually.
 
-## 6. Run
+## 6. Start
 
-* If you have modified the cloud configuration on the web page after **logging in** on the client, please click `Synchronize` on the **client**`Configuration` page before clicking `Run` before running the configuration
+* If you have modified the cloud configuration on the web page after **logging in** on the client, please click `Synchronize` on the **client**`Configuration` page before clicking `Start` before running the configuration
 
 ### Support dragging multiple or single files into the program window for scraping
 
