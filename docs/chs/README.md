@@ -43,6 +43,7 @@
 
 ## 4. 本地配置
 * 在`本地配置`页面中，配置刮削目录与输出目录
+* [NAS或云盘的目录配置](/chs/cloud_mount.html)
 
 ![](/images/readme2.png)
 
