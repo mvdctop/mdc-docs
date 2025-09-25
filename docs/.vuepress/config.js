@@ -1,6 +1,7 @@
 import { defaultTheme } from '@vuepress/theme-default';
 import { defineUserConfig } from 'vuepress';
 import { webpackBundler } from '@vuepress/bundler-webpack';
+import { redirectPlugin } from '@vuepress/plugin-redirect';
 
 export default defineUserConfig({
   bundler: webpackBundler({

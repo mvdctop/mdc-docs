@@ -1,4 +1,29 @@
-# 例外處理
+# 錯誤處理
+
+## 開啟客戶端無任何反應
+
+若執行 `MDC.exe` 或 `MDC.app` 無任何反應
+
+### Windows
+
+- 進入 `C:\Users\當前使用者名稱` 或在**檔案總管**的地址欄中輸入 `%homepath%` 並按 Enter 鍵
+- 刪除 `.mdc` 資料夾
+
+### macOS
+
+- 開啟 Finder - 前往 - 個人
+- 按下 `Command + Shift + .` 顯示隱藏檔案
+- 刪除 `.mdc` 資料夾
+
+### Docker
+
+- 刪除 `/config/.mdc` 下的所有檔案
+
+### Linux & macOS shell
+
+```shell
+rm -rf ~/.mdc
+```
 
 ## `Caused by ProxyError`
 請檢查代理，如果自訂代理未開啟，請開啟全域代理後運行
