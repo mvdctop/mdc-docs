@@ -14,4 +14,4 @@ Please send a screenshot of the payment
 
 Please send email to: `support@mvdc.top`
 
-We will assist you as soon as possible
+We will assist you as soon as possible, usually reply in the evening and early morning `UTC+8`
