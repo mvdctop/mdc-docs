@@ -24,8 +24,9 @@
 * This program and website** do not provide any video download method and are only used for personal file organization**
 
 ## 1. [Download](https://dl.mvdc.top) and execute the program
+* Upon first opening, you can select the language in the `Language` field: `English`.
 * Except for Windows systems, please read [How to use each client] (/clients.html) before downloading
-* It is strongly recommended to use the Windows or macOS version before using the Docker version
+* It is strongly recommended to install the `Chrome` browser, as MDC relies on `Chrome` to improve the success rate of scraping.
 
 ## 2. Register an account and log in
 * Register an account at the [User Panel] (https://user.mvdc.top) on the web page
@@ -64,7 +65,10 @@ If the prefix of the subtitle file name in the 'scraping directory' is the same 
 
 * If you have modified the cloud configuration on the web page after **logging in** on the client, please click `Synchronize` on the **client**`Configuration` page before clicking `Start` before running the configuration
 
-### Support dragging multiple or single files into the program window for scraping
+::: tip
+* Supports dragging multiple or single files into the MDC window for scraping.
+* When dragging a single file into the MDC window, you can customize the scraping name.
+:::
 
 * Videos that fail to be processed will be recorded, and a `failed_list.txt` failure list file will be generated in the directory where the program is located, which can be removed in the local configuration page.
 
