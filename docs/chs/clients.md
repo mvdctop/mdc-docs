@@ -1,5 +1,3 @@
-# Linux
-
 # macOS
 ### 允许任何来源程序运行
 * 左上角 - `系统偏好设置` - `安全性与隐私` - `安全性` - 勾选`任何来源`
@@ -8,52 +6,9 @@
 
 # Docker
 
-::: warning
-强烈建议在首次使用Docker版本前，先使用Windows或macOS版本  
-
-出现任何影响使用的BUG请使用桌面版，并参考[此处](/chs/cloud_mount.html)使用
-:::
+### 全新 Material Design 风格界面
 
 [Docker Hub 页面](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
-
-## 迁移到新版本
-
-::: tip
-旧版 ~~mvdctop/mdc~~ **停止更新**  
-请拉取 mvdctop/mdc-gui-lite  
-
-该条目将指导阁下  
-由 ~~mvdctop/mdc~~ 迁移至 mvdctop/mdc-gui-lite  
-请点击下方 **详细** 阅读
-:::
-
-::: details
-
----
-
-### 新特性
-可访问浏览器用户界面，容器默认HTTP端口`5800`，与其他客户端有一致的体验
-
-### 环境变量
-* `UID`更改为`USER_ID`
-* `GID`更改为`GROUP_ID`
-* DSM请点击 `-` 去除环境变量空值  
-![](/images/docker/11.jpg)
-
-### 端口
-映射容器HTTP端口`5800`
-
-### 配置文件
-移除旧版配置文件`mdc.ini`，使用新版重新生成的配置文件
-
-### 运行
-浏览器访问容器5800端口
-
-**任何BUG请立即[联系我们](https://docs.mvdc.top/chs/contact.html)反馈**
-
----
-
-:::
 
 
 ## 环境变量
@@ -77,9 +32,10 @@
 **宿主目录与容器目录完全一致**
 :::
 
----
+## 端口
+* `5800` HTTP
 
-以下教程二选一
+# 详细教程
 
 ## NAS系统
 

@@ -1,5 +1,3 @@
-# Linux
-
 # MacOS
 ### 允許任何來源程式運行
 * 左上角 - `系統偏好設定` - `安全性與隱私` - `安全性` - 勾選`任何來源`
@@ -8,52 +6,9 @@
 
 # Docker
 
-::: warning
-強烈建議在首次使用Docker版本前，先使用Windows或macOS版本
-
-出現任何影響使用的BUG請使用桌面版，並參考[此處](/chs/cloud_mount.html)使用
-:::
+### 全新 Material Design 風格介面
 
 [Docker Hub 頁面](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
-
-## 遷移到新版本
-
-::: tip
-舊版 ~~mvdctop/mdc~~ **停止更新**
-請拉取 mvdctop/mdc-gui-lite
-
-該條目將指導閣下
-由 ~~mvdctop/mdc~~ 遷移至 mvdctop/mdc-gui-lite
-請點擊下方 **詳細** 閱讀
-:::
-
-::: details
-
----
-
-### 新特性
-可存取瀏覽器使用者介面，容器預設HTTP連接埠`5800`，與其他用戶端有一致的體驗
-
-### 環境變數
-* `UID`更改為`USER_ID`
-* `GID`更改為`GROUP_ID`
-* DSM請點選 `-` 移除環境變數空值
-  ![](/images/docker/11.jpg)
-
-### 連接埠
-映射容器HTTP連接埠`5800`
-
-### 設定文件
-移除舊版設定檔`mdc.ini`，使用新版重新產生的設定文件
-
-### 運行
-瀏覽器訪問容器5800端口
-
-**任何BUG請立即[聯絡我們](https://docs.mvdc.top/chs/contact.html)回饋**
-
----
-
-:::
 
 
 ## 環境變數
@@ -77,9 +32,11 @@
 **宿主目錄與容器目錄完全一致**
 :::
 
----
+## 通訊埠
+* `5800` HTTP
 
-以下教學二選一
+
+# 詳細教程
 
 ## NAS系統
 
@@ -87,7 +44,7 @@
 
 * 開啟`Container Manager`取得`mvdctop/mdc-gui-lite`映像
 
-### 連接埠
+### 通訊埠
 * 映射埠HTTP 5800
   ![](/images/docker/4.jpg)
 

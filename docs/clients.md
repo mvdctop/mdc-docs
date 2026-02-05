@@ -1,5 +1,3 @@
-# Linux
-
 # macOS
 ### Allow any source program to run
 * Upper left corner - `System Preferences` - `Security & Privacy` - `Security` - Check `Any Source`
@@ -8,53 +6,9 @@
 
 # Docker
 
-::: warning
-It is strongly recommended to use the Windows or macOS version before using the Docker version for the first time
-
-If any bugs affect the use, please use the desktop version and refer to [here](/chs/cloud_mount.html)
-
-:::
+### New Material Design UI
 
 [Docker Hub page](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
-
-## Migrate to the new version
-
-::: tip
-Old version ~~mvdctop/mdc~~ **Stop updating**
-Please pull mvdctop/mdc-gui-lite
-
-This entry will guide you
-Migrate from ~~mvdctop/mdc~~ to mvdctop/mdc-gui-lite
-Please click **Details** below to read
-:::
-
-::: details
-
----
-
-### New features
-Access the browser user interface, the container defaults to HTTP port `5800`, and has a consistent experience with other clients
-
-### Environment variables
-* `UID` changed to `USER_ID`
-* `GID` changed to `GROUP_ID`
-* DSM, please click `-` to remove the empty value of the environment variable
-  ![](/images/docker/11.jpg)
-
-### Port
-Map container HTTP port `5800`
-
-### Configuration file
-Remove the old version of the configuration file `mdc.ini` and use the new version to regenerate the configuration file
-
-### Run
-Access the container port 5800 through the browser
-
-**Please [contact us](https://docs.mvdc.top/chs/contact.html) for any bugs**
-
----
-
-:::
 
 ## Environment variables
 | Field name | Value semantics | Default value |
@@ -78,9 +32,11 @@ If you must use link files, make sure that when configuring volumes,
 
 :::
 
----
+## Port
+* `5800` HTTP
 
-Choose one of the following tutorials
+
+# Detailed tutorial
 
 ## NAS system
 
