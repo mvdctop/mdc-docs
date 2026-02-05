@@ -57,12 +57,11 @@
 
 
 ## 环境变量
-| 字段名      | 值语义        | 预设值                 |
-|:---------|:-----------|:--------------------|
-| USER_ID  | 宿主机当前用户ID  | 1026                |
-| GROUP_ID | 宿主机当前用户组ID | 100                 |
-| UMASK    | 数据目录的权限掩码   | 002                 |
-| NAME     | 网页端显示的设备名称 | Docker-MDC-GUI-Lite |
+| 字段名      | 值语义        | 预设值        |
+|:---------|:-----------|:-----------|
+| USER_ID  | 宿主机当前用户ID  | 1000       |
+| GROUP_ID | 宿主机当前用户组ID | 1001       |
+| NAME     | 网页端显示的设备名称 | Docker-MDC |
 
 ## 卷
 | 卷      | 解释     |
@@ -89,17 +88,17 @@
 * 打开`Container Manager`获取`mvdctop/mdc-gui-lite`映像
 
 ### 端口
-* 映射端口5800
+* 映射HTTP端口5800
 ![](/images/docker/4.jpg)
-* 5900为VNC访问端口，可点击右侧`-`移除  
-![](/images/docker/11.jpg)
 
 
 ### 环境变量
 ![](/images/docker/5.jpg)
 
-* 普通 Linux 发行版默认用户`USER_ID`与`GROUP_ID`均为`1000`
-* Synology DSM 默认用户`USER_ID`为`1026` `GROUP_ID`为`100`
+|        | 飞牛 fnOS | 群晖 DSM | 普通 Linux 发行版 |
+|:---------|:--------|:------|:-----------|
+| USER_ID  | 1000    | 1026  | 1000       |
+| GROUP_ID | 1001    | 100   | 1000       |
 
 ![](/images/docker/id.jpg)
 
@@ -151,7 +150,7 @@ docker run \
   -v ${PWD}/config:/config/.mdc \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
-  -e NAME=Docker-MDC-GUI-Lite \
+  -e NAME=Docker-MDC \
   mvdctop/mdc-gui-lite
 ```
 #### docker-compose
@@ -172,7 +171,7 @@ services:
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
-      - NAME=Docker-MDC-GUI-Lite
+      - NAME=Docker-MDC
 ```
 命令
 ```sh

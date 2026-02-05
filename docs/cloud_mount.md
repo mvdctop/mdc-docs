@@ -16,9 +16,10 @@ The program is placed in the local disk and started
 # Use of cloud disk mounting tool
 Due to the flow control of cloud disk manufacturers, please avoid creating metadata-related files in the cloud disk. It is strongly recommended that you adjust the following configuration
 ### Windows Please make sure that in `This computer`, the NAS disk is located in `Network location`, not `Devices and drives`
-If you use local cloud disk mounting tools such as [CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, `Alist`, etc.
-Please make sure that the mounted drive letter type is `Network disk` in the mounting tool, otherwise it may cause the program to run incorrectly
-The program is placed in the local disk to start
+If you use local cloud disk mounting tools such as [CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, `Alist`, etc.  
+Please make sure that the mounted drive letter type is `Network disk` in the mounting tool, otherwise it may cause the program to run incorrectly  
+The program is placed in the local disk to start  
+![](/images/mount_en.jpg)
 
 ## Cloud configuration adjustment suggestions
 * Common Configuration - Organize mode - Select `Create strm file`

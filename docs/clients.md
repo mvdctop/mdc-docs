@@ -58,11 +58,10 @@ Access the container port 5800 through the browser
 
 ## Environment variables
 | Field name | Value semantics | Default value |
-|:---------|:-----------|:--------------------|
-| USER_ID | Current user ID of the host | 1026 |
-| GROUP_ID | Current user group ID of the host | 100 |
-| UMASK | Permission mask of the data directory | 002 |
-| NAME | Device name displayed on the web | Docker-MDC-GUI-Lite |
+|:---------|:-----------|:--------------|
+| USER_ID | Current user ID of the host | 1000          |
+| GROUP_ID | Current user group ID of the host | 1001          |
+| NAME | Device name displayed on the web | Docker-MDC    |
 
 ## Volumes
 | Volumes | Explanation |
@@ -90,16 +89,16 @@ Choose one of the following tutorials
 * Open `Container Manager` to obtain the `mvdctop/mdc-gui-lite` image
 
 ### Ports
-* Map port 5800
+* Map port HTTP 5800
   ![](/images/docker/4.jpg)
-* 5900 is the VNC access port, click the `-` on the right to remove it
-  ![](/images/docker/11.jpg)
 
 ### Environment variables
 ![](/images/docker/5.jpg)
 
-* The default user `USER_ID` and `GROUP_ID` ​​of ordinary Linux distributions are both `1000`
-* The default user `USER_ID` of Synology DSM is `1026` and `GROUP_ID` ​​is `100`
+|        | fnOS | Synology DSM  | Linux distributions  |
+|:---------|:------|:--------------|:---------------------|
+| USER_ID  | 1000  | 1026          | 1000                 |
+| GROUP_ID | 1001  | 100           | 1000                 |
 
 ![](/images/docker/id.jpg)
 
@@ -151,7 +150,7 @@ docker run \
   -v ${PWD}/config:/config/.mdc \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
-  -e NAME=Docker-MDC-GUI-Lite \
+  -e NAME=Docker-MDC \
   mvdctop/mdc-gui-lite
 ```
 #### docker-compose
@@ -172,7 +171,7 @@ services:
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
-      - NAME=Docker-MDC-GUI-Lite
+      - NAME=Docker-MDC
 ```
 Linux Commands
 ```sh

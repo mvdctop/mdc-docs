@@ -57,12 +57,11 @@
 
 
 ## 環境變數
-| 欄位名稱 | 值語意 | 預設值 |
-|:---------|:-----------|:--------------------|
-| USER_ID | 宿主機目前使用者ID | 1026 |
-| GROUP_ID | 宿主機目前使用者群組ID | 100 |
-| UMASK | 資料目錄的權限遮罩 | 002 |
-| NAME | 網頁端顯示的裝置名稱 | Docker-MDC-GUI-Lite |
+| 欄位名稱 | 值語意 | 預設值        |
+|:---------|:-----------|:-----------|
+| USER_ID | 宿主機目前使用者ID | 1000       |
+| GROUP_ID | 宿主機目前使用者群組ID | 1001       |
+| NAME | 網頁端顯示的裝置名稱 | Docker-MDC |
 
 ## 卷
 | 卷 | 解釋 |
@@ -89,17 +88,17 @@
 * 開啟`Container Manager`取得`mvdctop/mdc-gui-lite`映像
 
 ### 連接埠
-* 映射埠5800
+* 映射埠HTTP 5800
   ![](/images/docker/4.jpg)
-* 5900為VNC訪問端口，可點擊右側`-`移除
-  ![](/images/docker/11.jpg)
 
 
 ### 環境變數
 ![](/images/docker/5.jpg)
 
-* 普通 Linux 發行版預設使用者`USER_ID`與`GROUP_ID`皆為`1000`
-* Synology DSM 預設使用者`USER_ID`為`1026` `GROUP_ID`為`100`
+|        | fnOS   | Synology DSM  | 普通 Linux 發行版 |
+|:---------|:-------|:--------------|:-----------|
+| USER_ID  | 1000   | 1026          | 1000 |
+| GROUP_ID | 1001   | 100           | 1000 |
 
 ![](/images/docker/id.jpg)
 
@@ -151,7 +150,7 @@ docker run \
   -v ${PWD}/config:/config/.mdc \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
-  -e NAME=Docker-MDC-GUI-Lite \
+  -e NAME=Docker-MDC \
   mvdctop/mdc-gui-lite
 ```
 #### docker-compose
@@ -172,7 +171,7 @@ services:
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
-      - NAME=Docker-MDC-GUI-Lite
+      - NAME=Docker-MDC
 ```
 命令
 ```sh
