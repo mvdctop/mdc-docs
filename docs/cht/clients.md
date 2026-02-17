@@ -102,7 +102,7 @@ docker run \
   -p 5800:5800 \
   -v ${PWD}/data:/data \
   -v ${PWD}/output:/data/output \
-  -v ${PWD}/config:/config \
+  -v ${PWD}/config:/config/.mdc \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
   -e NAME=Docker-MDC \
@@ -122,7 +122,7 @@ services:
     volumes:
       - ./data:/data
       - ./output:/data/output
-      - ./config:/config
+      - ./config:/config/.mdc
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
