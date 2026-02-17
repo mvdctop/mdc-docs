@@ -17,11 +17,11 @@
 | NAME | Device name displayed on the web | Docker-MDC    |
 
 ## Volumes
-| Volumes | Explanation                  |
+| Volumes      | Explanation                  |
 |:-------------|:-----------------------------|
-| /config | Configuration file directory |
-| /data | Media data directory         |
-| /data | Media data output directory  |
+| /config/.mdc | Configuration file directory |
+| /data        | Media data directory         |
+| /data/output | Media data output directory  |
 
 ::: warning
 Soft/hard link files in Docker containers are not recommended
