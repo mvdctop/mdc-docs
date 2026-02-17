@@ -1,8 +1,7 @@
 # MacOS
 ### 允許任何來源程式運行
-* 左上角 - `系統偏好設定` - `安全性與隱私` - `安全性` - 勾選`任何來源`
-* 如果沒有，請在`終端`執行 `sudo spctl --master-disable` 密碼為使用者登陸密碼
 * 在`終端`執行 `sudo spctl --master-disable` 密碼為使用者登陸密碼
+* 左上角 - `系統偏好設定` - `安全性與隱私` - `安全性` - 勾選`任何來源`
 
 # Docker
 
@@ -19,17 +18,17 @@
 | NAME | 網頁端顯示的裝置名稱 | Docker-MDC |
 
 ## 卷
-| 卷 | 解釋 |
-|:-------------|:-------|
-| /data | 媒體資料目錄 |
-| /subs | 影片字幕目錄 |
-| /config/.mdc | 設定檔目錄 |
+| 卷            | 解釋        |
+|:-------------|:----------|
+| /config      | 設定檔資料夾    |
+| /data        | 媒體資料資料夾   |
+| /data/output | 媒體資料輸出資料夾 |
 
 ::: warning
 不建議在Docker容器內軟/硬連結文件
 
 如果一定要使用連結文件，請確保在設定卷時
-**宿主目錄與容器目錄完全一致**
+**宿主資料夾與容器資料夾完全一致**
 :::
 
 ## 通訊埠
@@ -63,13 +62,12 @@
   ![](/images/docker/11.jpg)
 
 ### 卷
-* 在宿主機中新資料夾，該目錄用於映射**容器內**目錄`/config/.mdc`（必選）
+* 在宿主機中新資料夾，該資料夾用於映射**容器內**資料夾`/config`（必選）
   ![](/images/docker/8.jpg)
 
 * 在容器頁面中，右鍵詳情，編輯卷
   ![](/images/docker/12.jpg)
 
-* `/subs`字幕目錄可選
 
 ### 完成運行，瀏覽器進入5800埠
 http://192.168.1.2:5800
@@ -80,7 +78,7 @@ http://192.168.1.2:5800
 
 ::: details
 
-建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的目錄權限問題
+建議先將目前使用者加入Docker使用者群組中，具體請谷歌，免去sudo運行造成的資料夾權限問題
 
 ### 拉取Docker映像
 ```sh
@@ -104,14 +102,14 @@ docker run \
   -p 5800:5800 \
   -v ${PWD}/data:/data \
   -v ${PWD}/output:/data/output \
-  -v ${PWD}/config:/config/.mdc \
+  -v ${PWD}/config:/config \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
   -e NAME=Docker-MDC \
   mvdctop/mdc-gui-lite
 ```
 #### docker-compose
-儲存為 `docker-compose.yml` 於目前目錄
+儲存為 `docker-compose.yml` 於目前資料夾
 ```yml
 version: '3.8'
 
@@ -124,7 +122,7 @@ services:
     volumes:
       - ./data:/data
       - ./output:/data/output
-      - ./config:/config/.mdc
+      - ./config:/config
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}

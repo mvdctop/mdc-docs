@@ -1,8 +1,7 @@
 # macOS
 ### Allow any source program to run
-* Upper left corner - `System Preferences` - `Security & Privacy` - `Security` - Check `Any Source`
-* If not, please run `sudo spctl --master-disable` in `terminal` and the password is the user login password
 * Run `sudo spctl --master-disable` in `terminal` and the password is the user login password
+* Upper left corner - `System Preferences` - `Security & Privacy` - `Security` - Check `Any Source`
 
 # Docker
 
@@ -18,11 +17,11 @@
 | NAME | Device name displayed on the web | Docker-MDC    |
 
 ## Volumes
-| Volumes | Explanation |
-|:-------------|:-------|
-| /data | Media data directory |
-| /subs | Video subtitle directory |
-| /config/.mdc | Configuration file directory |
+| Volumes | Explanation                  |
+|:-------------|:-----------------------------|
+| /config | Configuration file directory |
+| /data | Media data directory         |
+| /data | Media data output directory  |
 
 ::: warning
 Soft/hard link files in Docker containers are not recommended
@@ -62,13 +61,12 @@ If you must use link files, make sure that when configuring volumes,
   ![](/images/docker/11.jpg)
 
 ### Volumes
-* Create a new folder in the host machine. This directory is used to map the **container** directory `/config/.mdc` (required)
+* Create a new folder in the host machine. This directory is used to map the **container** directory `/config` (required)
   ![](/images/docker/8.jpg)
 
 * In the container page, right-click details and edit volume
   ![](/images/docker/12.jpg)
 
-* `/subs` subtitle directory is optional
 
 ### After running, enter port 5800 in the browser
 http://192.168.1.2:5800
@@ -103,7 +101,7 @@ docker run \
   -p 5800:5800 \
   -v ${PWD}/data:/data \
   -v ${PWD}/output:/data/output \
-  -v ${PWD}/config:/config/.mdc \
+  -v ${PWD}/config:/config \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
   -e NAME=Docker-MDC \
@@ -123,7 +121,7 @@ services:
     volumes:
       - ./data:/data
       - ./output:/data/output
-      - ./config:/config/.mdc
+      - ./config:/config
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}

@@ -1,8 +1,7 @@
 # macOS
 ### 允许任何来源程序运行
-* 左上角 - `系统偏好设置` - `安全性与隐私` - `安全性` - 勾选`任何来源`
-* 如果没有，请在`终端`运行 `sudo spctl --master-disable` 密码为用户登陆密码
 * 在`终端`运行 `sudo spctl --master-disable` 密码为用户登陆密码
+* 左上角 - `系统偏好设置` - `安全性与隐私` - `安全性` - 勾选`任何来源`
 
 # Docker
 
@@ -19,11 +18,11 @@
 | NAME     | 网页端显示的设备名称 | Docker-MDC |
 
 ## 卷
-| 卷      | 解释     |
-|:-------------|:-------|
-| /data        | 媒體数据目录 |
-| /subs        | 影片字幕目录 |
-| /config/.mdc | 配置文件目录 |
+| 卷            | 解释      |
+|:-------------|:--------|
+| /config      | 配置文件目录  |
+| /data        | 媒体数据目录  |
+| /data/output | 媒体数据输出目录 |
 
 ::: warning
 不推荐在Docker容器内软/硬链接文件
@@ -62,13 +61,12 @@
 ![](/images/docker/11.jpg)
 
 ### 卷
-* 在宿主机中新建文件夹，该目录用于映射**容器内**目录`/config/.mdc`（必选）
+* 在宿主机中新建文件夹，该目录用于映射**容器内**目录`/config`（必选）
 ![](/images/docker/8.jpg)
 
 * 在容器页面中，右键详情，编辑卷
 ![](/images/docker/12.jpg)
 
-* `/subs`字幕目录可选
 
 ### 完成运行，浏览器进入5800端口
 http://192.168.1.2:5800
@@ -103,7 +101,7 @@ docker run \
   -p 5800:5800 \
   -v ${PWD}/data:/data \
   -v ${PWD}/output:/data/output \
-  -v ${PWD}/config:/config/.mdc \
+  -v ${PWD}/config:/config \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
   -e NAME=Docker-MDC \
@@ -123,7 +121,7 @@ services:
     volumes:
       - ./data:/data
       - ./output:/data/output
-      - ./config:/config/.mdc
+      - ./config:/config
     environment:
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
