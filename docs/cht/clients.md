@@ -11,11 +11,15 @@
 
 
 ## 環境變數
-| 欄位名稱 | 值語意 | 預設值        |
-|:---------|:-----------|:-----------|
-| USER_ID | 宿主機目前使用者ID | 1000       |
-| GROUP_ID | 宿主機目前使用者群組ID | 1001       |
-| NAME | 網頁端顯示的裝置名稱 | Docker-MDC |
+| 欄位名稱 | 值語意             | 預設值        |
+|:---------|:----------------|:-----------|
+| USER_ID | 宿主機目前使用者ID      | 1000       |
+| GROUP_ID | 宿主機目前使用者群組ID    | 1001       |
+| NAME | 用戶面板裝置名稱與網頁標題   | Docker-MDC |
+| ACCESS_USERNAME | Docker Web 訪問帳號 | -          |
+| ACCESS_PASSWORD | Docker Web 訪問密碼 | -          |
+
+若環境變數`ACCESS_USERNAME`與`ACCESS_PASSWORD`均不為空，將自動啟用 **Docker Web 訪問鎖** ，並將其作為登入憑據
 
 ## 卷
 | 卷              | 解釋          |

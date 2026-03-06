@@ -11,11 +11,15 @@
 
 
 ## 环境变量
-| 字段名      | 值语义        | 预设值        |
-|:---------|:-----------|:-----------|
-| USER_ID  | 宿主机当前用户ID  | 1000       |
-| GROUP_ID | 宿主机当前用户组ID | 1001       |
-| NAME     | 网页端显示的设备名称 | Docker-MDC |
+| 字段名             | 值语义             | 预设值        |
+|:----------------|:----------------|:-----------|
+| USER_ID         | 宿主机当前用户ID       | 1000       |
+| GROUP_ID        | 宿主机当前用户组ID      | 1001       |
+| NAME            | 用户面板设备名称和网页标题   | Docker-MDC |
+| ACCESS_USERNAME | Docker Web 访问账号 | -          |
+| ACCESS_PASSWORD | Docker Web 访问密码 | -          |
+
+若`ACCESS_USERNAME`与`ACCESS_PASSWORD`环境变量均非空，将自动开启 **Docker Web 访问锁** ，并将其作为登录凭据
 
 ## 卷
 | 卷               | 解释      |

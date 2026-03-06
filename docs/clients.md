@@ -10,11 +10,16 @@
 [Docker Hub page](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
 
 ## Environment variables
-| Field name | Value semantics | Default value |
-|:---------|:-----------|:--------------|
-| USER_ID | Current user ID of the host | 1000          |
-| GROUP_ID | Current user group ID of the host | 1001          |
-| NAME | Device name displayed on the web | Docker-MDC    |
+| Field name | Value semantics                                 | Default value |
+|:---------|:------------------------------------------------|:--------------|
+| USER_ID | Current user ID of the host                     | 1000          |
+| GROUP_ID | Current user group ID of the host               | 1001          |
+| NAME | Device name displayed on the web and User Panel | Docker-MDC    |
+| ACCESS_USERNAME | Docker Web Access Account                       | -             |
+| ACCESS_PASSWORD | Docker Web Access Password                      | -             |
+
+If both `ACCESS_USERNAME` and `ACCESS_PASSWORD` environment variables are non-empty,   
+the **Docker Web Access Lock** will be enabled automatically using these values as login credentials.
 
 ## Volumes
 | Volumes      | Explanation                  |
