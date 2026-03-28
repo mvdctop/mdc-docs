@@ -19,6 +19,12 @@
 # 使用教程
 
 * 本程序和网站**不提供任何影片的下载途径 仅供个人文件整理使用**
+* 视频教程
+
+<video controls width="400">
+  <source src="/videos/guide-chs.mp4" type="video/mp4">
+  您的浏览器不支持 video 标签。
+</video>
 
 ## 1. [下载](https://dl.mvdc.top)并运行，建议全局代理使用
 * 首次打开，可在`Language`栏中选择语言，`简体中文` `繁體中文` `English`

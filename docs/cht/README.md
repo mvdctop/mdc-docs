@@ -20,6 +20,13 @@
 
 * 本程式和網站**不提供任何影片的下載途徑 僅供個人文件整理使用**
 
+* 視頻教程
+
+<video controls width="400">
+  <source src="/videos/guide-cht.mp4" type="video/mp4">
+  您的浏览器不支持 video 标签。
+</video>
+
 ## 1. [下載](https://dl.mvdc.top)並執行程序
 * 除Windows系統外，下載前請閱讀[各客戶端使用方式](/cht/clients.html)
 * 强烈建議安裝`Chrome`瀏覽器，MDC依賴`Chrome`提升刮削成功率
