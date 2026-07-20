@@ -137,6 +137,12 @@
 * Base URL `https://api.ap.siliconflow.com/v1`
 * Model `deepseek-ai/DeepSeek-V3`
 * [API Key](https://cloud.siliconflow.com/account/ak)  
+
+### [SiliconFlow 中國站](https://account.siliconflow.cn/zh/login)
+* Base URL `https://api.siliconflow.cn/v1`
+* Model `deepseek-ai/DeepSeek-V3`
+* [API Key](https://cloud.siliconflow.cn/account/ak)
+
 :::
 
 * 在上述已測試網站注冊賬號

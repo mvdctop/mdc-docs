@@ -8,6 +8,12 @@ export default defineUserConfig({
     // 可选的 webpack 打包配置
     // 例如：配置 source map
     devtool: 'source-map',
+    chainWebpack: (config) => {
+      config.module.rule('ts').use('esbuild-loader').tap((options) => ({
+        ...options,
+        target: 'esnext',
+      }));
+    },
   }),
   theme: defaultTheme({
     contributors: false,
