@@ -1,0 +1,19 @@
+[vp-content] strong,
+.hint-container strong {
+  font-weight: 800;
+  font-synthesis: weight style;
+}
+
+[vp-content] {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    "Source Han Sans SC",
+    sans-serif;
+  font-synthesis: weight style;
+}

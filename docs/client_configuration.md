@@ -18,6 +18,10 @@ Defaults to the folder where the program is located. You can add multiple folder
 
 Defaults to the newly created `output` folder under the program runtime directory.
 
+## Subtitle Configuration
+
+If the subtitle file prefix in the `Scraping Directory` matches the video file prefix, the subtitle will be automatically moved to the same directory as the video during subsequent processing. The `Subtitle` tag will also be added to the NFO metadata file, and a watermark will be added to the cover (this can be turned on or off on the web cloud configuration page).
+
 ## Other Configuration
 
 ### Name Extraction Mode
@@ -63,4 +67,4 @@ Only Emby and Jellyfin are supported.
 * After the program runs for the first time, a `mapping_tables` directory will be generated under `.mdc` in the system user directory. It contains two XML files and can be used with `Field Conversion Settings` in cloud configuration
 * Actor mapping table: `mapping_actor.xml`
 * Other field mapping table: `mapping_info.xml`
-* English `en` only supports content in the custom mapping table
+* Simplified Chinese to Traditional Chinese corresponds to `zh_tw`, Traditional Chinese to Simplified Chinese corresponds to `zh_cn`, and English `en` only supports content in the custom mapping table

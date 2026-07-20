@@ -1,10 +1,8 @@
 # 🏠 Home
 
-[繁體中文](/zh-Hant/README.md) | [简体中文](/zh-Hans/README.md)
-
 ## Overview
 
-Movie Data Crawler (MDC) is a software tool for organizing and scraping **local movie or series** files. It can obtain **movie or series** metadata from the Internet and download covers.
+Movie Data Crawler (MDC) is a software tool for organizing and scraping local movie or series files. It can obtain movie or series metadata from the Internet and download covers.
 
 MDC consists of two parts:
 
@@ -13,34 +11,29 @@ MDC consists of two parts:
 
 ### User Panel
 
-* **Account Management**: Provides user registration and login
-* **Cloud Configuration Management**: Manages cloud scraping configurations
-* **Device Management**: Views and manages devices logged in with your account
+* Account Management: Provides user registration and login
+* Cloud Configuration Management: Manages cloud scraping configurations
+* Device Management: Views and manages devices logged in with your account
 
 ### Local Client
 
-* ✅ **OpenAI large model translation integration**: Supports translation with OpenAI large models
-* ✅ **Multi-platform support**: Supports Windows, Linux, Docker, MacOS X86 & ARM
-* ✅ **Cloud configuration synchronization**: Synchronizes cloud configurations from the web panel and organizes local videos based on those configurations
-* ✅ **Metadata acquisition and cover download**: Scrapes metadata for local videos and downloads covers based on cloud configurations
-* ✅ **Multi-client support**: Supports using multiple cloud configuration instances on multiple local clients under the same account
+✅ Multi-platform support - Supports Windows macOS Docker  
+✅ Cloud configuration synchronization - Synchronizes cloud configurations from the web panel and organizes local videos based on those configurations  
+✅ Metadata acquisition and cover download - Scrapes metadata for local videos and downloads covers based on cloud configurations  
+✅ Multi-client support - Supports using multiple cloud configuration instances on multiple local clients under the same account  
+✅ OpenAI large model translation integration support
 
-## Contact Us
-
-[Contact us](/contact.html)
+::: info
+This project does not provide any video download methods and is only for personal file organization.
+:::
 
 # 📖 Use Tutorial
-
-::: warning
-This program and website **do not provide any video download methods and are only for personal file organization**.
-:::
 
 ## 1. Download and Run
 
 * Go to the [download page](https://dl.mvdc.top), download and run the program. Global proxy usage is recommended
 * Upon first opening, you can select the language in the `Language` field: `简体中文` `繁體中文` `English`
 * Except for Windows systems, please read [How to use each client](/clients.html) before downloading
-* It is strongly recommended to install the `Chrome` browser, as MDC relies on `Chrome` to improve the scraping success rate
 
 ## 2. Register an Account and Log In
 
@@ -61,7 +54,7 @@ After logging in, you can personalize [Cloud Configuration](https://user.mvdc.to
 * The subscription will be activated automatically after payment is completed
 * Multiple payment methods are supported
 
-## 4. Configure Local Directories
+## 4. Adjust Local Configuration
 
 * Configure the scraping directory and output directory on the `Local Configuration` page
 * NAS or cloud drive users should refer to [NAS or cloud drive directory configuration](/cloud_mount.html)
@@ -72,33 +65,40 @@ By default, the input folder is the program directory, and the output folder is 
 
 ## 5. Select Scraping Type
 
-According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page.
+According to the [File Naming Rules](/naming.html), click the corresponding `Video Type` in the lower right corner of the `Local Configuration` page.
 
 <img src="/images/scraping_type_en.png" width="500" alt="">
 
 * Before processing videos, click `Name Extraction Check` to confirm whether the extracted result meets expectations
 * If the extracted name does not meet expectations, manually rename the video file
 
-### External Subtitle Files
+### Cloud Configuration
 
-If the subtitle file prefix in the `Scraping Directory` matches the video file prefix, the subtitle will be automatically moved to the same directory as the video during subsequent processing. The `Subtitle` tag will also be added to the NFO metadata file, and a watermark will be added to the cover (this can be turned on or off on the web cloud configuration page).
+The default cloud configuration is the best adjustment based on extensive user feedback and testing, and can be used without editing.
+If you need to adjust the cloud configuration, click `Edit Cloud Configuration and Synchronize`.
+
+Clicking this entry will open the web page and **automatically trigger client synchronization**.
+
+::: info
+* This feature depends on permission for Chrome to access local network devices
+* On macOS, please change the default browser to Chrome
+:::
+
+If the client does not show `Client synchronization completed`, click `Synchronize Cloud Configuration Only` below.
 
 ## 6. Start Scraping
 
-If you modified the web cloud configuration after **logging in** on the client, click `Synchronize` on the **client** `Configuration` page before clicking `Start`.
-
 ::: tip
-* Supports dragging multiple or single files into the MDC window for scraping
+* Supports dragging multiple or single video files into the MDC window for scraping
 * When dragging a single file into the MDC window, you can customize the scraping name
 :::
 
-Videos that fail to be processed will be recorded, and a `failed_list.txt` failure list file will be generated in the program directory. It can be removed on the local configuration page.
+Videos that fail to be processed will be recorded. You can click `❗` in the lower-left corner of `Completed Project Information` to remove them.
 
 ## 7. Finish Organizing
 
 ::: warning
-* Please use the files and generated metadata before and after organization only for personal local management
-* Do not share or distribute them, as this may create legal liability in the user's jurisdiction
+Do not share or distribute the files before or after organization, or the generated metadata. This may create legal liability in the user's jurisdiction.
 :::
 
 The output folder can be imported into media managers such as Emby, Jellyfin, Plex to manage videos.
