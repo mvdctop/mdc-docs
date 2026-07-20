@@ -2,7 +2,7 @@
 
 ## Overview
 
-Movie Data Crawler (MDC) is a software tool for organizing and scraping local movie or series files. It can obtain movie or series metadata from the Internet and download covers.
+Movie Data Crawler (MDC) is a tool for organizing and scraping local movie or series files
 
 MDC consists of two parts:
 
