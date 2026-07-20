@@ -6,10 +6,10 @@ export default {
             '/': {
                 selectLanguageName: 'English',
             },
-            '/chs/': {
+            '/zh-Hans/': {
                 selectLanguageName: '简体中文',
             },
-            '/cht/': {
+            '/zh-Hant/': {
                 selectLanguageName: '繁體中文',
             },
         },
