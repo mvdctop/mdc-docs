@@ -71,7 +71,7 @@ MDC 由两个部分组成：
 * 在`本地配置`页面中配置刮削目录与输出目录
 * NAS 或云盘用户请参考[NAS 或云盘的目录配置](/zh-Hans/cloud_mount.html)
 
-![](/images/readme2.png)
+<img src="/images/readme2.png" width="500" alt="">
 
 默认情况下，输入文件夹为程序所在目录，输出文件夹为程序所在目录下新建的`output`文件夹。
 
@@ -79,9 +79,9 @@ MDC 由两个部分组成：
 
 根据[文件命名规则](/zh-Hans/naming.html)，在`本地配置`页右下角点击相应`刮削类型`。
 
-![](/images/scraping_type.png)
+<img src="/images/scraping_type.png" width="500" alt="">
 
-* 建议处理影片前点击`名称提取检查`，确认提取结果是否符合预期
+* 建议处理影片前点击`名称提取测试`，确认提取结果是否符合预期
 * 如果发现提取名称不符合预期，请手动重命名影片文件
 
 ### 外挂字幕文件

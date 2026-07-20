@@ -71,7 +71,7 @@ MDC 由兩個部分組成：
 * 在`本地配置`頁面中配置刮削目錄與輸出目錄
 * NAS 或雲端硬碟用戶請參考[NAS 或雲端硬碟的目錄配置](/zh-Hant/cloud_mount.html)
 
-![](/images/readme2.png)
+<img src="/images/readme2.png" width="500" alt="">
 
 預設情況下，輸入資料夾為程式所在目錄，輸出資料夾為程式所在目錄下新建的`output`資料夾。
 
@@ -79,9 +79,9 @@ MDC 由兩個部分組成：
 
 根據[檔案命名規則](/zh-Hant/naming.html)，在`本地配置`頁右下角點擊相應`刮削類型`。
 
-![](/images/scraping_type_zh-Hant.png)
+<img src="/images/scraping_type_zh-Hant.png" width="500" alt="">
 
-* 建議處理影片前點擊`名稱提取檢查`，確認提取結果是否符合預期
+* 建議處理影片前點擊`名稱提取測試`，確認提取結果是否符合預期
 * 如果發現提取名稱不符合預期，請手動重命名影片檔案
 
 ### 外掛字幕文件

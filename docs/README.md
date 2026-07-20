@@ -66,7 +66,7 @@ After logging in, you can personalize [Cloud Configuration](https://user.mvdc.to
 * Configure the scraping directory and output directory on the `Local Configuration` page
 * NAS or cloud drive users should refer to [NAS or cloud drive directory configuration](/cloud_mount.html)
 
-![](/images/readme2_en.png)
+<img src="/images/readme2_en.png" width="500" alt="">
 
 By default, the input folder is the program directory, and the output folder is the newly created `output` folder under the program directory.
 
@@ -74,7 +74,7 @@ By default, the input folder is the program directory, and the output folder is 
 
 According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page.
 
-![](/images/scraping_type_en.png)
+<img src="/images/scraping_type_en.png" width="500" alt="">
 
 * Before processing videos, click `Name Extraction Check` to confirm whether the extracted result meets expectations
 * If the extracted name does not meet expectations, manually rename the video file
