@@ -1,4 +1,4 @@
-# Privacy Policy
+# 🔒 Privacy Policy
 * Version: 1.0
 * Effective date: October 15, 2023
 * Validity period: Valid for a long time (unless further notice)
@@ -20,7 +20,7 @@ We may collect the following types of information:
 - Email address: used to contact you, send you information and provide support.
 - Computer MAC address, network name, operating system type: used to protect your data security and account security, users can see this data in the user panel
 
-**Personal information provided by users is necessary for the operation of our program. If you choose not to provide this information, the program may not function properly. This information is collected to push important news to users in a timely manner, confirm the user's age qualifications and prevent piracy. We are committed to protecting your personal information, please see this privacy policy for details. **
+**Personal information provided by users is necessary for the operation of our program. If you choose not to provide this information, the program may not function properly. This information is collected to push important news to users in a timely manner, confirm the user's age qualifications and prevent piracy. We are committed to protecting your personal information, please see this privacy policy for details.**
 
 ### 2.2 Non-Personal Information
 
@@ -53,7 +53,7 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions about our privacy policy or data processing, please contact us using the following contact details:
 
-Email address: [After-sales contact](/chs/README.md#After-sales contact)
+Email address: [After-sales contact](/contact.html)
 
 ## Article 9: User logout and data deletion request
 

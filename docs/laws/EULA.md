@@ -1,10 +1,9 @@
-# End User License Agreement (EULA)
+# 📄 End User License Agreement (EULA)
 * Version: 1.1
 * Effective date: January 23, 2024
 * Validity period: Valid for a long time (unless further notice)
 
 Before registering an account and using this software, please read this End User License Agreement carefully. By registering an account and using this software, you indicate that you have read, understood and agreed to all the terms and conditions of this document. If you disagree with any part of this document, please do not register an account and use this software.
-
 
 ## Article 1: Definition and responsibilities of both parties
 ### 1.1 Definition
@@ -13,7 +12,7 @@ Before registering an account and using this software, please read this End User
 * User, you: refers to the individual who accepts the terms of this agreement and uses the software.
 * Metadata: refers to movie-related information obtained from the Internet.
 * Subscription: refers to the payment system for obtaining the right to use software.
-*Additional notification: refers to notification through but not limited to sending emails, website announcements, etc.
+* Additional notification: refers to notification through but not limited to sending emails, website announcements, etc.
 * EULA: refers to this End User License Agreement.
 
 **The above definitions also apply to the Disclaimer and Privacy Policy of this Software and Website**
@@ -34,11 +33,10 @@ In order to ensure your experience, the running process of the software will tak
 * Keep software updated: In order to ensure the best performance and security of the software, you should always install and use software updates and fixes provided by the operator. Timely updates can help close potential vulnerabilities and provide a better user experience.
 * Maintain account security: You should carefully keep the login credentials of your software account and avoid sharing or leaking them to others to ensure the security and privacy of your account.
 * Comply with Usage Policy: You must comply with all terms of this EULA, Privacy Policy and Disclaimer.
-* **Use this program during non-peak hours**: It is especially recommended that you run this software during periods of low network traffic, such as hanging up before going to bed. During unattended operation, please ensure that the program configuration meets your expectations and ensures data security (such as disk snapshots).
+***Use this program during non-peak hours**: It is especially recommended that you run this software during periods of low network traffic, such as hanging up before going to bed. During unattended operation, please ensure that the program configuration meets your expectations and ensures data security (such as disk snapshots).
 
 ## Article 2: Acceptance of Terms
 Registering an account on this website and using this software constitutes your acceptance of all terms of this **End User License Agreement, Disclaimer and Privacy Policy**.
-
 
 ## Article 3: Licensing
 ### 3.1 Scope of authorization
@@ -64,12 +62,11 @@ The license period is the expiration date of the user's subscription. However, t
 
 ### 3.6 Geographical restrictions
 Users are responsible for understanding and complying with applicable laws and regulations in their location before and during use of the software. Users must ensure that the use of the software is legal in their location.
-**If it is illegal, please do not subscribe and terminate your use of this software. **
+**If it is illegal, please do not subscribe and terminate your use of this software.**
 Any local legal liability incurred by the user due to the use of this software shall be borne by the user.
 
 ### 3.7 version restrictions
 This License applies to all versions of the Software, unless otherwise stated.
-
 
 ## Article 4: Use restrictions
 ### 4.1 Decompile or modify software
@@ -91,7 +88,6 @@ Any form of cyberattack, data theft or malware distribution is expressly prohibi
 ### 4.6 Negative Impact
 Any violation of these Terms may have a negative impact on the quality of the Software and its services and may result in the suspension or termination of the User's account.
 
-
 ## Article 5: Subscription and Renewal
 ### 5.1 Subscription system
 This software is sold and licensed using a subscription model. You need to pay the corresponding subscription fee to obtain the software license and enjoy the following advantages during the subscription period:
@@ -112,7 +108,7 @@ The operator has the right to price software subscriptions with different usage 
 Before purchasing a software subscription, you are responsible for ensuring that the software is compatible with your computer system and that its use complies with local laws and regulations.
 
 ### 5.5 No refund policy
-**Please make sure that the software meets your needs and consider other related matters** Once you complete the subscription process and pay the subscription fee, the fee will not be refunded. If you no longer want to continue using the software, **the subscription will automatically terminate after the software subscription period**.
+**Please make sure that the software meets your needs and consider other related matters**. Once you complete the subscription process and pay the subscription fee, the fee will not be refunded. If you no longer want to continue using the software, **the subscription will automatically terminate after the software subscription period**.
 
 ## Article 6: Intellectual Property Rights
 ### 6.1 Ownership of intellectual property rights
@@ -132,7 +128,6 @@ If there is any infringement related to the software, please contact the operato
 
 ### 6.5 Intellectual Property Protection
 Users shall not infringe the intellectual property rights of the Operator or any third party in any form, including but not limited to through illegal copying or distribution of software or metadata.
-
 
 ## Article 7: User Responsibilities and Violations
 ### 7.1 Illegal copying and distribution
@@ -163,7 +158,6 @@ Users may not transmit malware, viruses or other harmful programs through the So
 
 Any violation will result in immediate termination of the software license with no refund of subscription fees paid.
 
-
 ## Article 8: Termination
 ### 8.1 License Termination Conditions
 Violation of any terms and conditions of this Agreement will result in immediate termination of your license to use the Software. The operator reserves the right to terminate the license without prior notice.
@@ -187,7 +181,7 @@ After the license is terminated, the operator has the right to delete or retain 
 ### 9.1 Overview of community plug-ins
 Community plug-ins are additional features or extensions developed by community users of the Software and may be downloaded, installed or enabled, including but not limited to, on the Operator's website and in the Software.
 Developers of community plug-ins can set up their own end-user license agreement or other agreements or other terms, but they cannot conflict with the terms of the agreement, privacy policy, and disclaimer.
-**The operator has a neutral attitude towards plug-ins developed by users in the community. If the plug-in infringes the terms of this EULA, the operator may disable the community plug-in and blacklist it, and reserves the right to litigate. **
+**The operator has a neutral attitude towards plug-ins developed by users in the community. If the plug-in infringes the terms of this EULA, the operator may disable the community plug-in and blacklist it, and reserves the right to litigate.**
 
 ### 9.2 Download community plug-in
 Users must consider the following factors before downloading community plug-ins:
@@ -200,7 +194,6 @@ After users download and use community plug-ins, they should evaluate the risks 
 
 Impact and risks: Users are responsible for the possible impacts and risks caused by downloading community plug-ins.
 Legal Liability: Any legal liability resulting from downloading community plug-ins is borne by the user.
-
 
 ## Article 10: Law and Jurisdiction
 ### 10.1 Applicable law
@@ -220,7 +213,5 @@ If there are major changes in the relevant laws of Hong Kong that affect the exe
 
 ### 10.6 Legal Advisor
 When it comes to legal issues related to this agreement, both parties have the right but not the obligation to hire professional legal counsel.
-
-
 
 **If you do not agree with any part of this agreement, please do not subscribe and terminate your use of this software**

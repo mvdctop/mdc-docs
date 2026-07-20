@@ -1,104 +1,120 @@
-# macOS
-### Allow any source program to run
-* Run `sudo spctl --master-disable` in `terminal` and the password is the user login password
-* Upper left corner - `System Preferences` - `Security & Privacy` - `Security` - Check `Any Source`
+# 🍎 macOS
 
-# Docker
+### Allow Programs from Any Source
+
+* Run `sudo spctl --master-disable` in `Terminal`; the password is the user login password
+* Open `System Preferences` - `Security & Privacy` - `Security`, then check `Any Source`
+
+# 🐳 Docker
 
 ### New Material Design UI
 
 [Docker Hub page](https://hub.docker.com/r/mvdctop/mdc-gui-lite)
 
-## Environment variables
-| Field name | Value semantics                                 | Default value |
-|:---------|:------------------------------------------------|:--------------|
-| USER_ID | Current user ID of the host                     | 1000          |
-| GROUP_ID | Current user group ID of the host               | 1001          |
-| NAME | Device name displayed on the web and User Panel | Docker-MDC    |
-| ACCESS_USERNAME | Docker Web Access Account                       | -             |
-| ACCESS_PASSWORD | Docker Web Access Password                      | -             |
+## Environment Variables
 
-If both `ACCESS_USERNAME` and `ACCESS_PASSWORD` environment variables are non-empty,   
-the **Docker Web Access Lock** will be enabled automatically using these values as login credentials.
+| Field Name | Meaning | Default |
+| :--- | :--- | :--- |
+| USER_ID | Current user ID of the host | 1000 |
+| GROUP_ID | Current user group ID of the host | 1001 |
+| NAME | Device name shown in the User Panel and web title | Docker-MDC |
+| ACCESS_USERNAME | Docker Web access account | - |
+| ACCESS_PASSWORD | Docker Web access password | - |
+
+If both `ACCESS_USERNAME` and `ACCESS_PASSWORD` are non-empty, the **Docker Web Access Lock** will be enabled automatically and used as login credentials.
 
 ## Volumes
-| Volumes      | Explanation                  |
-|:-------------|:-----------------------------|
+
+| Volume | Description |
+| :--- | :--- |
 | /config/.mdc | Configuration file directory |
-| /data        | Media data directory         |
-| /data/output | Media data output directory  |
+| /data | Media data directory |
+| /data/output | Media data output directory |
 
 ::: warning
-Soft/hard link files in Docker containers are not recommended
+Soft/hard link files are not recommended inside Docker containers.
 
-If you must use link files, make sure that when configuring volumes,
-**the host directory and the container directory are exactly the same**
-
+If link files must be used, make sure **the host directory and container directory are exactly the same** when configuring volumes.
 :::
 
 ## Port
+
 * `5800` HTTP
 
+# 📚 Detailed Tutorial
 
-# Detailed tutorial
+## NAS System
 
-## NAS system
+::: details Expand NAS system tutorial
 
-::: details
-
-* Open `Container Manager` to obtain the `mvdctop/mdc-gui-lite` image
+Open `Container Manager` and get the `mvdctop/mdc-gui-lite` image.
 
 ### Ports
-* Map port HTTP 5800
-  ![](/images/docker/4.jpg)
 
-### Environment variables
+* Map HTTP port `5800`
+
+![](/images/docker/4.jpg)
+
+### Environment Variables
+
 ![](/images/docker/5.jpg)
 
-|        | fnOS | Synology DSM  | Linux distributions  |
-|:---------|:------|:--------------|:---------------------|
-| USER_ID  | 1000  | 1026          | 1000                 |
-| GROUP_ID | 1001  | 100           | 1000                 |
+|  | fnOS | Synology DSM | Common Linux Distribution |
+| :--- | :--- | :--- | :--- |
+| USER_ID | 1000 | 1026 | 1000 |
+| GROUP_ID | 1001 | 100 | 1000 |
 
 ![](/images/docker/id.jpg)
 
-* Click `-` to remove the empty value of the environment variable
-  ![](/images/docker/11.jpg)
+* Click `-` to remove empty environment variable values
+
+![](/images/docker/11.jpg)
 
 ### Volumes
-* Create a new folder in the host machine. This directory is used to map the **container** directory `/config` (required)
-  ![](/images/docker/8.jpg)
 
-* In the container page, right-click details and edit volume
-  ![](/images/docker/12.jpg)
+* Create a new folder on the host. This directory maps to the **container** directory `/config` (required)
 
+![](/images/docker/8.jpg)
 
-### After running, enter port 5800 in the browser
+* On the container page, right-click details and edit volumes
+
+![](/images/docker/12.jpg)
+
+### Finish Running
+
+Open port `5800` in the browser:
+
+```text
 http://192.168.1.2:5800
+```
 
 :::
 
-## Ordinary Linux distribution
+## Common Linux Distribution
 
-::: details
+::: details Expand common Linux distribution tutorial
 
-It is recommended to add the current user to the Docker user group first. Please Google for details to avoid directory permission problems caused by sudo operation
+It is recommended to add the current user to the Docker user group first to avoid directory permission issues caused by running with sudo.
 
-### Pull Docker image
+### Pull Docker Image
+
 ```sh
 docker pull mvdctop/mdc-gui-lite
 mkdir -p config data data/output
 ```
 
-### Place the test video, or you can use a real video file
-This command is to create a blank test file
+### Place a Test Video
+
+This command creates an empty test file. You can also use a real video file.
+
 ```sh
-touch ./data/Resident Evil.2002.mp4
+touch ./data/Resident.Evil.2002.mp4
 ```
 
-### Run the container
+### Run the Container
 
 #### shell
+
 ```sh
 docker run \
   --rm \
@@ -112,8 +128,11 @@ docker run \
   -e NAME=Docker-MDC \
   mvdctop/mdc-gui-lite
 ```
+
 #### docker-compose
-Save as `docker-compose.yml` in current directory
+
+Save as `docker-compose.yml` in the current directory:
+
 ```yml
 version: '3.8'
 
@@ -132,7 +151,9 @@ services:
       - GROUP_ID=${GROUP_ID}
       - NAME=Docker-MDC
 ```
-Linux Commands
+
+Run:
+
 ```sh
 mkdir -p config data data/output
 export USER_ID=$(id -u)
@@ -140,7 +161,12 @@ export GROUP_ID=$(id -g)
 docker-compose up
 ```
 
-### Enter port 5800 in the browser
+### Browser Access
+
+Open port `5800` in the browser:
+
+```text
 http://192.168.1.2:5800
+```
 
 :::

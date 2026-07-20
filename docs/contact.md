@@ -1,17 +1,13 @@
-## Contact Us
+## ✉️ Contact Us
 
-If you encounter any of the following issues or have any suggestions, please feel free to contact us through the following methods:
+If you encounter any of the following issues or have any suggestions, please contact us by email:
 
-* Reset password
-Please use the registered email address to send, or send a screenshot of the payment and username
-
-* Retrieve username
-Please send a screenshot of the payment
-
+* Reset password: please send the email from your registered email address, or send a payment screenshot and username
+* Retrieve username: please send a payment screenshot
 * BUG feedback
-* Payment anomaly
+* Payment issue
 * Comments and suggestions
 
 Please send email to: `support@mvdc.top`
 
-We will assist you as soon as possible, usually reply in the evening and early morning `UTC+8`
+We will assist you as soon as possible, usually in the evening and early morning of the `UTC+8` timezone.

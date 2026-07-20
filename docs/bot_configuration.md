@@ -1,16 +1,25 @@
-# Push processing results
-After each file processing, the client pushes the processing results, including the number of successful and failed files
+# 🔔 Push Processing Results
 
-## Access tutorial
+After each processing run, the client can push the processing result, including the number of successful and failed files.
+
+## Access Tutorial
+
 ### Get Chat ID
-Log in to Telegram, enter [Robot](https://t.me/mvdcbot), click the START button below, or enter `/start` to get the 9-digit Chat ID
 
-### Enter the obtained Chat ID
-In the [User Panel - Processing Result Push](https://user.mvdc.top/bot) page, enter the obtained Chat ID, check Enable, and select the push language that suits you
+Log in to Telegram, open the [bot](https://t.me/mvdcbot), click the `START` button at the bottom, or enter `/start` to get a 9-digit Chat ID.
 
-### Update configuration
-If you receive the `Hello` message sent by the robot, the setting is successful
+### Enter Chat ID
 
-### Push a list of successful or failed file names
-Each push result will include a list of successful or failed file names
-**We only forward information and do not collect push content**
+On the [User Panel - Processing Result Push](https://user.mvdc.top/bot) page, enter the Chat ID, enable the feature, and select the push language that suits you.
+
+### Update Configuration
+
+If you receive a `Hello` message from the bot, the setup is successful.
+
+### Push File Name Lists
+
+Each push result includes the successful or failed file name list.
+
+::: tip
+We only forward information and do not collect push content.
+:::

@@ -1,29 +1,39 @@
-# Use of cloud disk mounting tool
-### Windows Please make sure that in `This PC`, the NAS disk is in `Network Location` and not `Devices and Drives`
-If you use [CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, `Alist` and other local cloud disk mounting tools
-Please make sure that in the mounting tool, the mounted drive letter type is `network disk`, otherwise it may cause the program to run incorrectly.
-The program is placed in the local disk and started
+# 🗄️ NAS Usage
 
-# NAS usage
-* Map network drive: Open Explorer in Windows, click `Computer` at the top of the window, and click `Map Network Drive` at the bottom
+## Windows
 
-* Please make sure that in `This PC`, the **NAS disk is in `Network Location`** and not in `Devices and Drives`
+* Map network drive: open File Explorer, click `Computer` at the top, then click `Map Network Drive`
 
-* The program is placed in the local disk of the current computer. If the NAS share has enabled exe execution permission, it can also be placed in the network drive.
+![](/images/network_drive.png)
 
-* Scrape directory and output directory, select the directory under the network drive
+* Make sure that in `This PC`, the **NAS disk is under `Network Location`**, not `Devices and Drives`
+* Place the program on the local disk of the current computer. If exe execution permission is enabled on the NAS share, it can also be placed on the network drive
+* Run the client `MDC.exe`, then select directories under the network drive for the scraping directory and output directory
 
-# Use of cloud disk mounting tool
-Due to the flow control of cloud disk manufacturers, please avoid creating metadata-related files in the cloud disk. It is strongly recommended that you adjust the following configuration
-### Windows Please make sure that in `This computer`, the NAS disk is located in `Network location`, not `Devices and drives`
-If you use local cloud disk mounting tools such as [CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, `Alist`, etc.  
-Please make sure that the mounted drive letter type is `Network disk` in the mounting tool, otherwise it may cause the program to run incorrectly  
-The program is placed in the local disk to start  
+## macOS
+
+* Refer to [Connect your Mac to shared computers and servers](https://support.apple.com/guide/mac-help/mchlp1140/mac)
+* Run the client `MDC`, then select folders in the connected server for the scraping directory and output directory
+
+# 🗂️ Cloud Drive Mounting Tool Usage
+
+Due to cloud drive vendor rate limits, avoid creating metadata-related files in the cloud drive. It is strongly recommended to adjust to the following configuration.
+
+::: tip
+On Windows, make sure that in `This PC`, the NAS disk is under `Network Location`, not `Devices and Drives`.
+:::
+
+If you use local cloud drive mounting tools such as [CloudDrive](https://www.clouddrive2.com/), `RaiDrive`, or `Alist`, make sure the mounted drive type is `Network Disk`; otherwise, the program may fail to run correctly.
+
+Start the program from a local disk.
+
 ![](/images/mount_en.jpg)
 
-## Cloud configuration adjustment suggestions
+## Cloud Configuration Adjustment Suggestions
+
 * Common Configuration - Organize mode - Select `Create strm file`
 
-## Local configuration adjustment suggestions
-* Folders Configuration - Scrape directory - Select the directory in **Cloud disk**
-* Folders Configuration - Output directory - Select the **Local** directory
+## Local Configuration Adjustment Suggestions
+
+* Directory Configuration - Scraping Directory - Select a directory in the **cloud drive**
+* Directory Configuration - Output Directory - Select a **local** directory

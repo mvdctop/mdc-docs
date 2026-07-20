@@ -1,14 +1,33 @@
-# Clear configuration
-Be sure to close the program before clearing the configuration
+# 🧹 Clear Configuration
+
+::: warning
+Be sure to close the program before clearing the configuration.
+:::
 
 ## Linux
-`rm -rf ~/.mdc`
 
-## MacOS
-### method one
-Open Finder, click `Go` on the top bar, click `Personal` to enter the home directory, press the shortcut key `cmd+shift+.` to display hidden folders and files, delete `.mdc`
-### Method Two
-Open a terminal and run `rm -rf ~/.mdc`
+```sh
+rm -rf ~/.mdc
+```
+
+## macOS
+
+### Method 1
+
+1. Open Finder
+2. Click `Go` in the top bar
+3. Click `Home` to enter the home directory
+4. Press `cmd + shift + .` to show hidden folders and files
+5. Delete the `.mdc` folder
+
+### Method 2
+
+Open Terminal and run:
+
+```sh
+rm -rf ~/.mdc
+```
 
 ## Windows
-Open the resource manager and delete the .mdc folder under `C:/Users/username`
+
+Open File Explorer and delete the `.mdc` folder under `C:/Users/username`.

@@ -1,107 +1,134 @@
-# General Movie or Episode 
+# 🧾 File Naming Rules
 
-::: details
+## General Movies or Series
 
-### Episode naming rules
-🟢 To scrape episodes, the file name must contain at least `x episodes/episodes/episodes`, `EPxx`  
-🟢 If the file name is only `x episode/episode/episode` `EPxx` and does not contain `x season`, `SxxExx`, it will be recognized as episode x of **Season 1** by default  
-🟢 Accurate to scrape x season x episode, the file name **must** contain `SxxExx` `x season x episode` `x season  
+::: details Expand general movie or series naming rules
 
-### Episode naming
-`The.Walking.Dead.S01E01.2010.mp4`  
-`The.Vampire.Diaries.S01E13.2010.720p.BluRay.x264.AC3-CMCT.mkv`
+### Series Recognition Rules
 
-## Video naming
+* When scraping series, the file name **must at least** contain `x episode(s)` or `EPxx`
+* If the file name only contains `x episode(s)` or `EPxx`, and does not contain `x season` or `SxxExx`, it will be recognized as episode x of **Season 1** by default
+* To precisely identify season x episode x, the file name **must** contain `SxxExx`, `season x episode x`, or an equivalent season and episode marker
+
+### Series Naming Examples
+
+```text
+The.Walking.Dead.S01E01.2010.mp4
+The.Vampire.Diaries.S01E13.2010.720p.BluRay.x264.AC3-CMCT.mkv
+[example-site]Crime.Diary-01.mp4
+```
+
+### Movie Naming Examples
+
 ![](/images/example33.png)
 
-`Inception.2010.UHD.BluRay.1080p.DTS.HDR.x265-TnP.mkv`  
-`Kung.Fu.Hustle.2004.BluRay.1080p.x265.10bit.2Audio.MNHD-FRDS.mkv`  
-`The Martian.2015.mp4`  
-`Resident Evil.2002.1080p.mp4`  
-
-### Naming suffix
-
-> As a technical mark only, the program only adds labels and watermarks to the cover image in the NFO file based on the file name, and does not detect the file content;
-> The developer is not responsible for the content of the file and does not represent any specific position
-
-Please open the folded content below to view
-
-::: details
-
-| Watermark type | Video file name |
-|------|-----------------|
-| 4K | `xxxxxx-4k.mp4` |
-| 8K | `xxxxxx-8k.mp4` |
-| Original disk(ISO) | `xxxxxx.iso` |
-
-### Custom watermark image file
-* It is recommended that the size be `769 x 374` or a PNG image with similar proportions (must contain a transparent layer or the reading will fail)
-
-* Create a new `watermarks` directory under the `.mdc` directory in the current user directory. If there are files named below in the newly created directory, the original watermark image of the program will be overwritten (case sensitive)
-
-| Watermark type | Watermark file name |
-|------|-----------|
-| Subtitles | `SUB.png` |
-| 4K | `4K.png` |
-| 8K | `8K.png` |
-| Original disk(ISO) | `ISO.png` |
+```text
+Inception.2010.UHD.BluRay.1080p.DTS.HDR.x265-TnP.mkv
+Kung.Fu.Hustle.2004.BluRay.1080p.x265.10bit.2Audio.MNHD-FRDS.mkv
+The.Martian.2015.mp4
+Resident.Evil.2002.1080p.mp4
+[The.White.Storm].2013.BluRay.1080p.x264.DTS.2Audios-CMCT.mp4
+12.Years.a.Slave.mp4
+[example-site]Chernobyl.Diaries.2012.BluRay.mp4
+Blue.Beetle.2023.BD.1080P.mkv
+Test.Movie.2022.HD.1080P.mkv
+Redemption.Day.BD.1080p.mp4
+```
 
 :::
 
+### General Movie Naming Suffixes
 
----
+::: tip
+Naming suffixes are only technical markers. The program only adds tags to NFO files and watermarks to cover images based on the file name. It does not inspect file content.
 
-# Other Movie
+The developer is not responsible for file content and does not represent any specific position.
+:::
 
-::: details
+::: details Expand naming suffix and custom watermark instructions
 
-Used to scrape movies sold in Japan that are named after numbers, for example:
-> The following pictures are from the Internet and are for reference only. The copyright belongs to the copyright holder.
+| Watermark Type | Video File Name |
+| --- | --- |
+| 4K | `xxxxxx-4k.mp4` |
+| 8K | `xxxxxx-8k.mp4` |
+| Original Disk | `xxxxxx.iso` |
+| Subtitles | `xxxxxx-C.mp4` |
+
+#### Custom Watermark Image Files
+
+* Use a PNG image sized around `769 x 374` or with a similar ratio. It must contain a transparent layer, otherwise loading will fail
+* Create a `watermarks` directory under the `.mdc` directory in the current user directory
+* If the `watermarks` directory contains files with the names below, they will override the built-in watermark images (case sensitive)
+
+| Watermark Type | Watermark File Name |
+| --- | --- |
+| Subtitles | `SUB.png` |
+| 4K | `4K.png` |
+| 8K | `8K.png` |
+| Original Disk | `ISO.png` |
+
+:::
+
+## Other Movies
+
+::: details Expand other movie naming rules
+
+Used to scrape movies released in Japan that use number-based file names, for example:
 
 ![](/images/example11.png)
 
-### No need to judge case
+### Case Insensitive
 
-| Video type | File name |
-|----------------|-------------------------------------------------------|
-| Ordinary video | `xxx-888.mp4` |
-| Multi-episode videos | `xxx-777-CD1.mp4` `xxx-777-CD2.mp4` If other suffixes are included - CD is placed last |
+| Video Type | File Name |
+| --- | --- |
+| Regular video | `XXX-888.mp4` `lorem.11.22.33.mp4` `XXXXXX-114514_191.mp4` `XXXXX-191981-100.mp4` |
+| Multi-part video | `XXX-777-CD1.mp4` `XXX-777-CD2.mp4` `XXX-777-part1.mp4` `xxx-777-part2.mp4` |
 | DMM/FANZA | `test00114.mp4` |
 | FC2 | `FC2-666666.mp4` |
 | Fantia | `FANTIA-666666.mp4` |
 | DLsite | `VJ555555.mp4` `RJ444444.mp4` |
 | Getchu | `GETCHU-123456.mp4` `item654321.mp4` |
 | Gcolle | `gcolle-987654.mp4` |
+| Anime series and other Japanese file names | `[xx字幕组][xxx]xxxxxxx[xxx][x264].mp4` `xxxxxxxxx.mp4` |
 
-### Naming suffix
+:::
 
-> As a technical mark only, the program only adds labels and watermarks to the cover image in the NFO file based on the file name, and does not detect the file content;
-> The developer is not responsible for the content of the file, nor does it represent any specific position
+### Other Movie Naming Suffixes
 
-Please open the folded content below to view
+::: tip
+Naming suffixes are only technical markers. The program only adds tags to NFO files and watermarks to cover images based on the file name. It does not inspect file content.
 
-::: details
+The developer is not responsible for file content and does not represent any specific position.
+:::
 
-| Watermark type | Video file name |
-|-------------|---------------------------------|
-| Outflow | `xxx-555-leak.mp4` |
-| AI demosaicing | `xxx-444-hack.mp4` |
+::: details Expand naming suffix and custom watermark instructions
+
+| Watermark Type | Video File Name |
+| --- | --- |
+| Leak | `xxx-555-leak.mp4` |
+| AI Demosaic | `xxx-444-hack.mp4` |
 | 4K | `xxx-333-4k.mp4` |
+| Subtitles Included | `xxx-222ch.mp4` `xxx-222-C.mp4` |
+| Subtitles and 4K | `xxx-111-c-4k.mp4` |
+| AI Demosaic and Subtitles Included | `xxx-999-UC.mp4` |
 | VR | `ddd-555-vr.mp4` |
-| Original disk(ISO) | `xxx-xxx.iso` |
+| Original Disk | `xxx-xxx.iso` |
 
-### Custom watermark image file
-The recommended size is `769 x 374` or a PNG image with similar proportions (must contain a transparent layer or the reading will fail)
-Create a new `watermarks` directory under the `.mdc` directory in the current user directory. If there are files named below in the newly created directory, the original watermark image of the program will be overwritten (case sensitive)
+#### Custom Watermark Image Files
 
-| Watermark type | Watermark file name |
-|--------|------------------|
+* Use a PNG image sized around `769 x 374` or with a similar ratio. It must contain a transparent layer, otherwise loading will fail
+* Create a `watermarks` directory under the `.mdc` directory in the current user directory
+* If the `watermarks` directory contains files with the names below, they will override the built-in watermark images (case sensitive)
+
+| Watermark Type | Watermark File Name |
+| --- | --- |
 | Subtitles | `SUB.png` |
 | 4K | `4K.png` |
 | 8K | `8K.png` |
-| Original disk | `ISO.png` |
-| Outflow | `LEAK.png` |
+| Original Disk | `ISO.png` |
+| Leak | `LEAK.png` |
 | VR | `VR.png` |
-| Infantry | `UNCENSORED.png` |
+| Uncensored | `UNCENSORED.png` |
+| AI Demosaic | `HACK.png` |
 
 :::

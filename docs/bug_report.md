@@ -1,21 +1,41 @@
-### In order to facilitate event tracking, please send an email according to the following template `support@mvdc.top`
+::: tip
+To help us track the issue, please send an email to `support@mvdc.top` using the template below.
+:::
 
-# Report a bug
-## mail title
+# 🐞 Report a BUG
+
+## Email Title
+
+```text
 [BUG Report]XXX
+```
 
-## Text
+::: warning
+If you are not subscribed, or if fewer than 2 screenshots are provided for diagnosis, we may not be able to reply.
+:::
+
+## Body
+
+* Show a screenshot of your **active subscription**, or reply directly below the subscription email
 
 ### BUG Description
-* Clearly and concisely describe what the error is
-* Send 2 or more **screenshots**, such as: cloud configuration or local configuration screenshots, running output screenshots, and file processing screenshots before and after
 
-# Feature suggestions
-## mail title
+* **A one-sentence report without screenshots is not enough to accurately determine the cause**
+* Clearly and concisely describe the error
+* Send 2 or more **screenshots**, such as cloud configuration, local configuration, runtime output, and before/after file processing screenshots
+
+# 💡 Feature Suggestions
+
+## Email Title
+
+```text
 [Feature Suggestion]XXX
+```
 
-## Text
-* **Screenshot showing your subscription**
+## Body
 
-### Function description
-Clearly and concisely describe what the proposed functionality is
+* **Show a screenshot of your active subscription**
+
+### Feature Description
+
+Clearly and concisely describe the proposed feature.

@@ -1,85 +1,112 @@
-# [繁體中文](/cht/README.md)
-# [简体中文](/chs/README.md)
+# 🏠 Home
 
-# Home
-* Movie Data Crawler (MDC) is a powerful software tool
-* Designed for organizing and scraping **local movie or series** files, obtaining **movie or series** metadata and downloading covers from the Internet
-* MDC has 2 parts: web user panel and local client
+[繁體中文](/cht/README.md) | [简体中文](/chs/README.md)
+
+## Overview
+
+Movie Data Crawler (MDC) is a software tool for organizing and scraping **local movie or series** files. It can obtain **movie or series** metadata from the Internet and download covers.
+
+MDC consists of two parts:
+
+* Web user panel
+* Local client
+
 ### User Panel
-* **Account Management**: Provide user registration and login functions
-* **Cloud Configuration Management**: Used to manage configuration settings for cloud scraping
-* **Device Management**: Used to view devices used to manage login accounts
-### Native client
-✅ OpenAI large model translation access support  
-✅ Supports Windows, Linux, Docker, MacOS X86 & ARM  
-✅ **Cloud configuration synchronization**: The client can synchronize the cloud configuration on the web page, and organize and scrape local movies based on the cloud configuration.  
-✅ **Metadata acquisition and cover download**: According to the cloud configuration, metadata scraping and cover download of local videos are performed  
-✅ **Multi-Client Support**: Supports using multiple cloud configuration instances on multiple local clients using the same account  
 
-## Contact us
+* **Account Management**: Provides user registration and login
+* **Cloud Configuration Management**: Manages cloud scraping configurations
+* **Device Management**: Views and manages devices logged in with your account
+
+### Local Client
+
+* ✅ **OpenAI large model translation integration**: Supports translation with OpenAI large models
+* ✅ **Multi-platform support**: Supports Windows, Linux, Docker, MacOS X86 & ARM
+* ✅ **Cloud configuration synchronization**: Synchronizes cloud configurations from the web panel and organizes local videos based on those configurations
+* ✅ **Metadata acquisition and cover download**: Scrapes metadata for local videos and downloads covers based on cloud configurations
+* ✅ **Multi-client support**: Supports using multiple cloud configuration instances on multiple local clients under the same account
+
+## Contact Us
+
 [Contact us](/contact.html)
 
-# Use tutorial
+# 📖 Use Tutorial
 
-* This program and website** do not provide any video download method and are only used for personal file organization**
+::: warning
+This program and website **do not provide any video download methods and are only for personal file organization**.
+:::
 
-## 1. [Download](https://dl.mvdc.top) and execute the program
-* Upon first opening, you can select the language in the `Language` field: `English`.
-* Except for Windows systems, please read [How to use each client] (/clients.html) before downloading
-* It is strongly recommended to install the `Chrome` browser, as MDC relies on `Chrome` to improve the success rate of scraping.
+## 1. Download and Run
 
-## 2. Register an account and log in
-* Register an account at the [User Panel] (https://user.mvdc.top) on the web page
-* Click `Login` in Client
+* Go to the [download page](https://dl.mvdc.top), download and run the program. Global proxy usage is recommended
+* Upon first opening, you can select the language in the `Language` field: `简体中文` `繁體中文` `English`
+* Except for Windows systems, please read [How to use each client](/clients.html) before downloading
+* It is strongly recommended to install the `Chrome` browser, as MDC relies on `Chrome` to improve the scraping success rate
+
+## 2. Register an Account and Log In
+
+* Register an account on the web [User Panel](https://user.mvdc.top)
+* Click `Login` in the client
 
 ![](/images/readme1_en.png)
 
-* You can personalize [settings] after logging in on the web (https://user.mvdc.top/configuration/general). New users are recommended to use the current default settings.
-* Cloud configuration supports multiple configuration instances, and multiple cloud configuration instances can be added to handle different types of videos
-* Each account can log in to up to 3 devices, and each of the two configurations can have up to 6 cloud configuration instances.
-  *(Optional) If you use it frequently or have requirements for accurate data, it is recommended that you apply for [TMDB API KEY](/configuration.html#tmdb-api-key) and fill it in the cloud settings
+After logging in, you can personalize [Cloud Configuration](https://user.mvdc.top/configuration/general). New users are recommended to use the current default configuration first.
 
-## 3. Subscribe
-* On the [Activate Subscription](https://user.mvdc.top/activation) page, select the subscription plan that suits you
-* Subscription will be automatically activated after payment is completed
+* Cloud configuration supports multiple instances, which can be added for different types of videos
+* Each account can log in to up to 3 devices, and each of the two configurations can have up to 6 cloud configuration instances
+* (Optional) If you use it frequently or require more accurate data, apply for a [TMDB API KEY](/configuration.html#tmdb-api-key) and fill it in the cloud configuration
+
+## 3. Activate Subscription
+
+* Select a suitable subscription plan on the [Activate Subscription](https://user.mvdc.top/activation) page
+* The subscription will be activated automatically after payment is completed
 * Multiple payment methods are supported
 
-## 4. Local Configuration
-* Set the scraping folder and output folder in the `Local Configuration` page
+## 4. Configure Local Directories
+
+* Configure the scraping directory and output directory on the `Local Configuration` page
+* NAS or cloud drive users should refer to [NAS or cloud drive directory configuration](/cloud_mount.html)
 
 ![](/images/readme2_en.png)
 
-* By default, the input folder is the directory where the program is located, and the output folder is the newly created `output` folder in the directory where the program is located.
+By default, the input folder is the program directory, and the output folder is the newly created `output` folder under the program directory.
 
-### External subtitle file
-If the prefix of the subtitle file name in the 'scraping directory' is the same as the prefix of the video file, it will be automatically moved to the same directory as the video in subsequent processing, and the 'subtitles' tag will be added to the NFO metadata file label. And add a floating watermark to the cover (can be turned on or off in the web cloud settings page)
+## 5. Select Scraping Type
 
-## 5. According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page
+According to the [File Naming Rules](/naming.html), click the corresponding `Scraping Type` in the lower right corner of the `Local Configuration` page.
 
 ![](/images/scraping_type_en.png)
 
-* Please perform name extraction to check whether it meets expectations before processing the video
-* If you find that the extracted name does not match the expected video, please rename it manually.
+* Before processing videos, click `Name Extraction Check` to confirm whether the extracted result meets expectations
+* If the extracted name does not meet expectations, manually rename the video file
 
-## 6. Start
+### External Subtitle Files
 
-* If you have modified the cloud configuration on the web page after **logging in** on the client, please click `Synchronize` on the **client**`Configuration` page before clicking `Start` before running the configuration
+If the subtitle file prefix in the `Scraping Directory` matches the video file prefix, the subtitle will be automatically moved to the same directory as the video during subsequent processing. The `Subtitle` tag will also be added to the NFO metadata file, and a watermark will be added to the cover (this can be turned on or off on the web cloud configuration page).
+
+## 6. Start Scraping
+
+If you modified the web cloud configuration after **logging in** on the client, click `Synchronize` on the **client** `Configuration` page before clicking `Start`.
 
 ::: tip
-* Supports dragging multiple or single files into the MDC window for scraping.
-* When dragging a single file into the MDC window, you can customize the scraping name.
+* Supports dragging multiple or single files into the MDC window for scraping
+* When dragging a single file into the MDC window, you can customize the scraping name
 :::
 
-* Videos that fail to be processed will be recorded, and a `failed_list.txt` failure list file will be generated in the directory where the program is located, which can be removed in the local configuration page.
+Videos that fail to be processed will be recorded, and a `failed_list.txt` failure list file will be generated in the program directory. It can be removed on the local configuration page.
 
-## 7. Ending
-* The output folder can be imported into media managers such as Emby, Jellyfin, Plex, etc. to manage videos
+## 7. Finish Organizing
 
----
+::: warning
+* Please use the files and generated metadata before and after organization only for personal local management
+* Do not share or distribute them, as this may create legal liability in the user's jurisdiction
+:::
 
+The output folder can be imported into media managers such as Emby, Jellyfin, Plex to manage videos.
 
-## Access program log
-`.mdc/logs` in the directory where the system user is located
+## Access Program Logs
 
-## Contact us
+`.mdc/logs` under the system user directory
+
+## Contact Us
+
 [Contact us](/contact.html)

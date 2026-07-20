@@ -1,4 +1,4 @@
-# Disclaimer
+# ⚠️ Disclaimer
 * Version: 1.0
 * Effective date: October 15, 2023
 * Validity period: Valid for a long time (unless further notice)
@@ -34,4 +34,4 @@ By using this software, you indicate that you have read, understood and agreed t
 
 If you have any questions or require further information, please contact the developer.
 
-Email address: [After-sales contact](/chs/README.md#After-sales contact)
+Email address: [After-sales contact](/contact.html)
