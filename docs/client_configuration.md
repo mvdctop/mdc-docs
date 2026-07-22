@@ -6,7 +6,7 @@ The default configuration file path is `.mdc/mdc.ini` under the system user dire
 
 If a file named `mdc.ini` also exists in the program directory, the program will read that file first. This allows programs in different locations to use independent configuration files.
 
-## Directory Configuration
+## Directory Config
 
 When one of the `Scraping Directory` entries is the same as the `Output Directory`, scraping and organizing can be done directly under the scraping directory. In this mode, only 1 scraping directory can be configured.
 
@@ -18,21 +18,11 @@ Defaults to the folder where the program is located. You can add multiple folder
 
 Defaults to the newly created `output` folder under the program runtime directory.
 
-## Subtitle Configuration
+## Subtitle Config
 
 If the subtitle file prefix in the `Scraping Directory` matches the video file prefix, the subtitle will be automatically moved to the same directory as the video during subsequent processing. The `Subtitle` tag will also be added to the NFO metadata file, and a watermark will be added to the cover (this can be turned on or off on the web cloud configuration page).
 
-## Other Configuration
-
-### Name Extraction Mode
-
-* Tests name extraction based on the video file name
-
-Before each run, make sure to enable this option and run once to check name extraction.
-
-If the extracted name does not match the video name, manually rename the video file according to the [Naming Rules](/naming.md), then run the check again.
-
-Only disable name extraction mode after all videos to be scraped are extracted correctly.
+## General Settings
 
 ### Debug Mode
 
@@ -40,9 +30,17 @@ Only disable name extraction mode after all videos to be scraped are extracted c
 
 When a BUG occurs, click `Stop`, enable `Debug Mode`, click `Run` again, then save the output log and related screenshots and send them according to [Report BUG](/bug_report.md).
 
-### Check for Updates
+### Check for Update on start
 
 * Recommended to keep enabled to receive the latest update reminders
+
+### Chrome Simulator
+
+It is recommended to disable this feature. Enabling it will allow you to request sites with strong anti-scraping measures, but it will increase the scraping time. Chrome browser must be installed.
+
+### Backend Hosting Mode
+
+When checked, the scraping will not automatically stop after each cycle. It will automatically scrape newly added video files at intervals based on the currently selected cloud configuration settings.
 
 ## Custom URL Scraping
 
@@ -51,7 +49,9 @@ When a BUG occurs, click `Stop`, enable `Debug Mode`, click `Run` again, then sa
 * Supported video information URLs include general websites in cloud configuration and video type websites in naming rules
 * During processing, if a video has a custom URL, the custom URL will be used
 
-## Actor Avatars
+## Actors
+
+Add avatars for media server
 
 ::: tip
 Only Emby and Jellyfin are supported.

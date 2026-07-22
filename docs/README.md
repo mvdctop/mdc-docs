@@ -32,7 +32,7 @@ This project does not provide any video download methods and is only for persona
 ## 1. Download and Run
 
 * Go to the [download page](https://dl.mvdc.top), download and run the program. Global proxy usage is recommended
-* Upon first opening, you can select the language in the `Language` field: `简体中文` `繁體中文` `English`
+* Upon first opening, you can select the language in the `LANGUAGE` field
 * Except for Windows systems, please read [How to use each client](/clients.html) before downloading
 
 ## 2. Register an Account and Log In
@@ -56,7 +56,7 @@ After logging in, you can personalize [Cloud Configuration](https://user.mvdc.to
 
 ## 4. Adjust Local Configuration
 
-* Configure the scraping directory and output directory on the `Local Configuration` page
+* Configure the scraping directory and output directory on the `LOCAL CONFIG` page
 * NAS or cloud drive users should refer to [NAS or cloud drive directory configuration](/cloud_mount.html)
 
 <img src="/images/readme2_en.png" width="500" alt="">
@@ -65,17 +65,17 @@ By default, the input folder is the program directory, and the output folder is 
 
 ## 5. Select Scraping Type
 
-According to the [File Naming Rules](/naming.html), click the corresponding `Video Type` in the lower right corner of the `Local Configuration` page.
+According to the [File Naming Rules](/naming.html), click the corresponding `Video Type` in the lower right corner of the `LOCAL CONFIG` page.
 
 <img src="/images/scraping_type_en.png" width="500" alt="">
 
-* Before processing videos, click `Name Extraction Check` to confirm whether the extracted result meets expectations
+* Before processing videos, click `Name Parsing Test` to confirm whether the extracted result meets expectations
 * If the extracted name does not meet expectations, manually rename the video file
 
 ### Cloud Configuration
 
 The default cloud configuration is the best adjustment based on extensive user feedback and testing, and can be used without editing.
-If you need to adjust the cloud configuration, click `Edit Cloud Configuration and Synchronize`.
+If you need to adjust the cloud configuration, click `EDIT & SYNC CLOUD`.
 
 Clicking this entry will open the web page and **automatically trigger client synchronization**.
 
@@ -84,7 +84,7 @@ Clicking this entry will open the web page and **automatically trigger client sy
 * On macOS, please change the default browser to Chrome
 :::
 
-If the client does not show `Client synchronization completed`, click `Synchronize Cloud Configuration Only` below.
+If the client does not show `✔ Cloud Config Synced`, click `SYNC CLOUD ONLY` below.
 
 ## 6. Start Scraping
 
@@ -93,7 +93,7 @@ If the client does not show `Client synchronization completed`, click `Synchroni
 * When dragging a single file into the MDC window, you can customize the scraping name
 :::
 
-Videos that fail to be processed will be recorded. You can click `❗` in the lower-left corner of `Completed Project Information` to remove them.
+Videos that fail to be processed will be recorded. You can click `❗` in the lower-left corner of `COMPLETED PROJECTS` to remove them.
 
 ## 7. Finish Organizing
 
