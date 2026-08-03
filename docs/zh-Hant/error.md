@@ -2,14 +2,14 @@
 
 ## 網路相關
 
-如果日誌中出現以下資訊任一條
-
-```text
-[-]Connect retry X/X
-```
+如果運行中出現以下資訊任一條
 
 ```text
 登入失敗，請檢查網絡鏈接
+```
+
+```text
+[-]Connect retry X/X
 ```
 
 ```text

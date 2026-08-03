@@ -2,14 +2,14 @@
 
 ## Network Related
 
-If the log shows the following any message
-
-```text
-[-]Connect retry X/X
-```
+If running shows the following any message
 
 ```text
 Login failed, Please check network connection
+```
+
+```text
+[-]Connect retry X/X
 ```
 
 ```text

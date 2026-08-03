@@ -2,14 +2,14 @@
 
 ## 网络相关
 
-如果日志中出现以下信息任一条
-
-```text
-[-]Connect retry X/X
-```
+如果运行中出现以下信息任一条
 
 ```text
 登录失败，请检查网络连接
+```
+
+```text
+[-]Connect retry X/X
 ```
 
 ```text
