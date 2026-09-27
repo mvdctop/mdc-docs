@@ -17,8 +17,8 @@ MDC consists of two parts:
 
 ### Local Client
 
-✅ Multi-platform support - Supports Windows macOS Docker
-✅ [Browse scraped media](/metadata_browser.html) - Quickly scans directories scraped by MDC or other tools, with list, cover, search, and filter views
+✅ Multi-platform support - Supports Windows macOS Docker  
+✅ [Browse scraped media](/metadata_browser.html) - Quickly scans directories scraped by MDC or other tools, with list, cover, search, and filter views  
 ✅ Cloud configuration synchronization - Synchronizes cloud configurations from the web panel and organizes local videos based on those configurations  
 ✅ Metadata acquisition and cover download - Scrapes metadata for local videos and downloads covers based on cloud configurations  
 ✅ Multi-client support - Supports using multiple cloud configuration instances on multiple local clients under the same account  
