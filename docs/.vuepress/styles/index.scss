@@ -17,3 +17,43 @@
     sans-serif;
   font-synthesis: weight style;
 }
+
+.mdc-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.mdc-feature {
+  padding: 1.25rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-bg);
+}
+
+.mdc-feature h3 {
+  margin-top: 0;
+  color: var(--c-text);
+}
+
+.mdc-feature p {
+  margin-bottom: 0;
+  color: var(--c-text-light);
+  line-height: 1.7;
+}
+
+.mdc-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0 2rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .mdc-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

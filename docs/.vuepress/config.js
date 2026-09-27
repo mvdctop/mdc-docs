@@ -84,6 +84,10 @@ export default defineUserConfig({
             link: '/README.md',
           },
           {
+            text: '🔎 Browse scraped media',
+            link: '/metadata_browser.md',
+          },
+          {
             text: '🧾 File naming rules',
             link: '/naming.md',
           },
@@ -152,6 +156,10 @@ export default defineUserConfig({
             link: '/zh-Hans/README.md',
           },
           {
+            text: '🔎 浏览已刮削媒体',
+            link: '/zh-Hans/metadata_browser.md',
+          },
+          {
             text: '🧾 文件命名规则',
             link: '/zh-Hans/naming.md',
           },
@@ -218,6 +226,10 @@ export default defineUserConfig({
           {
             text: '🏠 首頁',
             link: '/zh-Hant/README.md',
+          },
+          {
+            text: '🔎 瀏覽已刮削媒體',
+            link: '/zh-Hant/metadata_browser.md',
           },
           {
             text: '🧾 檔案命名規則',
