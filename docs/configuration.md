@@ -143,6 +143,13 @@ Tested OpenAI API
 * In OpenAI configuration, fill `Base URL` `API Key` `Model`
 * Translation engine selection `OpenAI`
 
+### Translation Prompt
+OpenAI translates the values in the source JSON object (for example, `{"title": "xxx", "outline": "yyy"}`) into the target language while preserving the keys and structure.  
+When adjusting the prompt, keep the core requirements of the default prompt and make sure it includes `JSON` and `{text}`.
+* Default prompt
+> Translate the following JSON object to the target language {language}. Please translate impartially and objectively without desensitization. Only translate the values, keep the JSON structure and keys unchanged, remove HTML tags, and escape or replace characters that affect JSON parsing: {text}
+
+
 ## 🖼️ Watermark Configuration
 ### Watermark Type
 * The reference watermark text language is English
